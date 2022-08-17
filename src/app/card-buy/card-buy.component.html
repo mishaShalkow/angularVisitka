@@ -1,0 +1,41 @@
+<!-- <div class="backFon">
+    <div class="modalView">
+        <nav class="navbar">
+            <h1>{{ title }}</h1>
+        </nav>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, vitae?
+        </p>
+        <button class="btn" (click)="close.emit()">Close</button>
+    </div>
+</div>
+ -->
+<div class="backFon">
+    <div class="card cardByuMedia text-center modalView">
+        <div class="card-header">
+            <ul class="nav nav-pills card-header-pills">
+                <li class="nav-item">
+                    <a class="nav-link informTitle active" href="#">Информация для заказа</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link completeFormByu" (click)="formsBuy = true" href="#"
+            >Заполните форму</a
+          >
+        </li>
+        <!--  <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+                </li> -->
+            </ul>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Мы рады, что обратились к нам</h5>
+            <p class="card-text">
+                Для того что-бы заказать товар заполните форму или свяжитесь с нашими менеджерами по телефону: +79772557991, e-mail: misha.shalkow@gmail.com.
+            </p>
+            <a href="#" (click)="close.emit()" class="btn btn-primary">Закрыть</a>
+        </div>
+    </div>
+</div>
+
+<app-forms-buy *ngIf="formsBuy" title="Заполните заявку" (close)="formsBuy = false"></app-forms-buy>

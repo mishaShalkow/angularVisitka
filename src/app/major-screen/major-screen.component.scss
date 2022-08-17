@@ -1,0 +1,236 @@
+.carousel-control-next-icon {
+    background-color: gray;
+}
+
+.btnStyleLights {
+    margin-top: 23px;
+    margin-left: 3px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.titleLights {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-left: 280px;
+}
+
+.col {
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+
+/* .card-body {
+    height: 150px;
+} */
+
+
+/* .imgStyleIndividalImagee5Card2 {
+    height: 250px;
+}
+
+.card-bodyCusomStyleI5C2 {
+    height: 150px;
+}
+
+.btnStyleIndividalImagee5Card2 {
+    margin-left: 3px;
+    margin-bottom: 50px;
+}
+ */
+
+
+/* .btnStyleIndividalCard3 {
+    margin-left: 3px;
+    margin-bottom: 50px;
+}
+ */
+
+.btnStyleIndividalImagee5Card2 {
+    margin-right: 3px;
+}
+
+.card-img-top {
+    align-items: center;
+    text-align: center;
+    height: 220px;
+}
+
+.customStyleBody {
+    height: 150px;
+}
+
+.card-text {
+    height: 96px;
+}
+
+.card {
+    width: 250px;
+}
+
+
+/* CardLine4 */
+
+.btnCustomImgCard4 {
+    margin-top: 0px;
+}
+
+.btnCustom2ImgCard4 {
+    margin-top: 0px;
+}
+
+.divCardCard4 {
+    height: 371px;
+}
+
+
+/* cardLine4Finish */
+
+
+/* ------------------------------------------------------------------------- */
+
+
+/* media-запросы */
+
+
+/* Стили для устройств с маленьким экраном, размерами 768px - 991px  */
+
+
+/* Стили для ноутбуков и компьютеров с экранами в диапазоне 992px - 1199px  */
+
+
+/* Стили для устройств с большой шириной экрана >1200px  */
+
+@media (min-width: 575px) and (max-width: 575px) {
+    .app-major-screen {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+    .container {
+        margin-left: 80px;
+    }
+    /*
+    .btnMediaW575 {
+        margin-left: -100px;
+        border-radius: 10px;
+    } */
+}
+
+@media (min-width: 768px) and (max-width: 768px) {
+    .row {
+        margin-left: -120px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1024px) {
+    .row {
+        margin-left: -331px;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1500px) {
+    .navbar-brand {
+        height: 50px;
+        padding: 15px;
+        font-size: 20px;
+    }
+    .container {
+        margin-left: 300px;
+    }
+    .row {
+        margin-left: -185px;
+    }
+}
+
+@media (min-width: 2560px) and (max-width: 2560px) {
+    /*    .navbar-brand {
+        height: 80px;
+        padding: 30px;
+        margin-top: 300px;
+        margin: 0;
+    } */
+    .container {
+        margin-left: 540px;
+    }
+    .navbar-brand {
+        font-size: 35px;
+        padding: 20px;
+        margin-top: 270px;
+    }
+    .specialStyleM2560 {
+        font-size: 35px;
+        padding: 20px;
+        margin: 0;
+    }
+    .btn-primary {
+        font-size: 30px;
+    }
+    .btn-secondary {
+        font-size: 30px;
+    }
+    .card-title {
+        font-size: 28px;
+    }
+    .row {
+        width: 1600px;
+        margin-left: -130px;
+    }
+    .col {
+        margin-right: 100px;
+    }
+    .mediaScreen2560 {
+        margin-top: 500px;
+    }
+    .card {
+        width: 400px;
+        height: 570px;
+        margin: 10px;
+        border: none;
+    }
+    .card-img-top {
+        height: 350px;
+    }
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 435px) {
+    .row {
+        margin-left: -290px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 385px) {
+    .row {
+        margin-left: -315px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 330px) {
+    .row {
+        margin-left: -345px;
+    }
+}
+
+
+/*
+display: flex;
+flex-direction: column;
+margin-left: 20%;
+card margin-bot: 20px
+*/

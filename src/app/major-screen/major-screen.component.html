@@ -1,0 +1,586 @@
+<div class="titleLights titleLights1">
+    <h2 class="bg-light navbar-brand specialStyleM2560">Светильники для бани</h2>
+</div>
+
+<div class="container my-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
+        <div class="col">
+            <div class="card">
+                <img [src]="imgUrlNBB" class="card-img-top" alt="Картинка светильника" />
+                <div class="card-body">
+                    <h5 class="card-title">{{ titleImg1Card1 }}</h5>
+
+                    <a (click)="clickInfo()" id="informId" class="btn btnStyleLights btn-primary">{{ information }}</a
+          >
+          <a
+            (click)="modalView = true"
+            class="btn btnMediaW575 btnStyleLights btn-secondary"
+            >{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- image 2 card 1 -->
+
+    <div class="col mediaScreen2560">
+      <div class="card">
+        <img
+          [src]="imgUrlblock1NBP"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg2Card1 }}</h5>
+          <a (click)="clickInfoImg2()" class="btn btnStyleLights btn-primary">{{
+            information2
+          }}</a>
+                    <a (click)="modalView = true" class="btn btnStyleLights btn-secondary">{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+    <!--    image 3 card 1 -->
+
+    <div class="col">
+      <div class="card">
+        <img
+          [src]="imgUrlblock1036001"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg3Card1 }}</h5>
+          <a (click)="clickInfoImg3()" class="btn btnStyleLights btn-primary">{{
+            information3
+          }}</a>
+                    <a (click)="modalView = true" class="btn btnStyleLights btn-secondary">{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!--    image 4 card 1 -->
+
+    <div class="col">
+      <div class="card">
+        <img
+          [src]="imgUrlblock10460001"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg4Card1 }}</h5>
+          <a (click)="clickInfoImg4()" class="btn btnStyleLights btn-primary">{{
+            information4
+          }}</a>
+                    <a (click)="modalView = true" class="btn btnStyleLights btn-secondary">{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!--    image 5 card 1 -->
+
+    <div class="col">
+      <div class="card">
+        <img
+          [src]="imgUrlblock10460002"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg5Card1 }}</h5>
+          <a (click)="clickInfoImg5()" class="btn btnStyleLights btn-primary">{{
+            information5
+          }}</a>
+                    <a (click)="modalView = true" class="btn btnStyleLights btn-secondary">{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="titleLights">
+  <h2 class="bg-light navbar-brand">Садово-парковое освещение</h2>
+</div>
+
+<div class="container my-5">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
+    <!--        image 1 card 2 -->
+    <div class="col">
+      <div class="card">
+        <img
+          [src]="imgUrlCard2Img1"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg1Card2 }}</h5>
+          <a
+            (click)="clickInfoImg1Card2()"
+            class="btn btnStyleLights btn-primary"
+            >Подробней</a
+          >
+          <a
+            (click)="modalView = true"
+            class="btn btnStyleLights btn-secondary"
+            >{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!--        image 2 card 2 -->
+    <div class="col mediaScreen2560">
+      <div class="card">
+        <img
+          [src]="imgUrlCard2Img2"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg2Card2 }}</h5>
+          <a
+            (click)="clickInfoImg2Card2()"
+            class="btn btnStyleLights btn-primary"
+            >Подробней</a
+          >
+          <a
+            (click)="modalView = true"
+            class="btn btnStyleLights btn-secondary"
+            >{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!--        image 3 card 2 -->
+    <div class="col">
+      <div class="card">
+        <img
+          [src]="imgUrlCard2Img3"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg3Card2 }}</h5>
+          <a
+            (click)="clickInfoImg3Card2()"
+            class="btn btnStyleLights btn-primary"
+            >Подробней</a
+          >
+          <a
+            (click)="modalView = true"
+            class="btn btnStyleLights btn-secondary"
+            >{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!--        image 4 card 2 -->
+    <div class="col">
+      <div class="card" *ngIf="visibleCard">
+        <img
+          [src]="imgUrlCard2Img4"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg4Card2 }}</h5>
+          <a
+            (click)="clickInfoImg4Card2()"
+            (click)="poupvisible()"
+            class="btn btnStyleLights btn-primary"
+            >Подробней</a
+          >
+          <a
+            (click)="poupvisible()"
+            (click)="modalView = true"
+            class="btn btnStyleLights btn-secondary"
+            >{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!--        image 5 card 2 -->
+    <div class="col">
+      <div class="card">
+        <img
+          [src]="imgUrlCard2Img5"
+          class="card-img-top imgStyleIndividalImagee5Card2"
+          alt="Картинка светильника"
+        />
+        <div class="card-body card-bodyCusomStyleI5C2">
+          <h5 class="card-title">{{ titleImg5Card2 }}</h5>
+          <a
+            (click)="clickInfoImg5Card2()"
+            class="btn btnStyleIndividalImagee5Card2 btn-primary"
+            >Подробней</a
+          >
+          <a
+            (click)="modalView = true"
+            class="btn btnStyleIndividalCard3 btn-secondary"
+            >{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="titleLights">
+  <h2 class="bg-light navbar-brand">Общественное освещение</h2>
+</div>
+
+<div class="container my-5">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
+    <!--        image 1 card 3 -->
+    <div class="col">
+      <div class="card">
+        <img
+          [src]="imgUrlCard3Img1"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg1Card3 }}</h5>
+          <a
+            (click)="clickInfoImg1Card3()"
+            class="btn btnStyleLights btn-primary"
+            >Подробней</a
+          >
+          <a
+            (click)="modalView = true"
+            class="btn btnStyleLights btn-secondary"
+            >{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+    <!--        image 2 card 3 -->
+    <div class="col mediaScreen2560">
+      <div class="card">
+        <img
+          [src]="imgUrlCard3Img2"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg2Card3 }}</h5>
+          <a
+            (click)="clickInfoImg2Card3()"
+            class="btn btnStyleLights btn-primary"
+            >Подробней</a
+          >
+          <a
+            (click)="modalView = true"
+            class="btn btnStyleLights btn-secondary"
+            >{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+    <!--        image 3 card 3 -->
+    <div class="col">
+      <div class="card">
+        <img
+          [src]="imgUrlCard3Img3"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg3Card3 }}</h5>
+          <a
+            (click)="clickInfoImg3Card3()"
+            class="btn btnStyleLights btn-primary"
+            >Подробней</a
+          >
+          <a
+            (click)="modalView = true"
+            class="btn btnStyleLights btn-secondary"
+            >{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+    <!--        image 4 card 3 -->
+    <div class="col">
+      <div class="card">
+        <img
+          [src]="imgUrlCard3Img4"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg4Card3 }}</h5>
+          <a
+            (click)="clickInfoImg4Card3()"
+            class="btn btnStyleLights btn-primary"
+            >Подробней</a
+          >
+          <a
+            (click)="modalView = true"
+            class="btn btnStyleLights btn-secondary"
+            >{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+    <!--        image 5 card 3 -->
+    <div class="col">
+      <div class="card">
+        <img
+          [src]="imgUrlCard3Img5"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg5Card3 }}</h5>
+          <a
+            (click)="clickInfoImg5Card3()"
+            class="btn btnStyleLights btn-primary"
+            >Подробней</a
+          >
+          <a
+            (click)="modalView = true"
+            class="btn btnStyleLights btn-secondary"
+            >{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="titleLights">
+  <h2 class="bg-light navbar-brand">Катушки и удлинители</h2>
+</div>
+
+<div class="container my-5">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
+    <!--        image 1 card 4 -->
+    <div class="col">
+      <div class="card">
+        <img
+          [src]="imgUrlCard4Img1"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg1Card4 }}</h5>
+          <a
+            (click)="clickInfoImg1CardLine5()"
+            class="btn btnStyleLights btn-primary"
+            >Подробней</a
+          >
+          <a
+            (click)="modalView = true"
+            class="btn btnStyleLights btn-secondary"
+            >{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+    <!--        image 2 card 4 -->
+    <div class="col mediaScreen2560">
+      <div class="card">
+        <img
+          [src]="imgUrlCard4Img2"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg2Card4 }}</h5>
+          <a
+            (click)="clickInfoImg2CardLine5()"
+            class="btn btnStyleLights btn-primary"
+            >Подробней</a
+          >
+          <a
+            (click)="modalView = true"
+            class="btn btnStyleLights btn-secondary"
+            >{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+    <!--        image 3 card 4 -->
+    <div class="col">
+      <div class="card">
+        <img
+          [src]="imgUrlCard4Img3"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg3Card4 }}</h5>
+          <a
+            (click)="clickInfoImg3CardLine5()"
+            class="btn btnStyleLights btn-primary"
+            >Подробней</a
+          >
+          <a
+            (click)="modalView = true"
+            class="btn btnStyleLights btn-secondary"
+            >{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+    <!--        image 4 card 4 -->
+    <div class="col">
+      <div class="card divCardCard4">
+        <img
+          [src]="imgUrlCard4Img4"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg4Card4 }}</h5>
+          <a
+            (click)="clickInfoImg4CardLine5()"
+            class="btn btnStyleLights btnCustomImgCard4 btn-primary"
+            >Подробней</a
+          >
+          <a
+            (click)="modalView = true"
+            class="btn btnStyleLights btnCustom2ImgCard4 btn-secondary"
+            >{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+    <!--        image 5 card 4 -->
+    <div class="col mediaScreen2560">
+      <div class="card divCardCard4">
+        <img
+          [src]="imgUrlCard4Img5"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg5Card4 }}</h5>
+          <a
+            (click)="clickInfoImg5CardLine5()"
+            class="btn btnStyleLights btnCustomImgCard4 btn-primary"
+            >Подробней</a
+          >
+          <a
+            (click)="modalView = true"
+            class="btn btnStyleLights btnCustom2ImgCard4 btn-secondary"
+            >{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+    <!--        image 6 card 4 -->
+    <div class="col">
+      <div class="card divCardCard4">
+        <img
+          [src]="imgUrlCard4Img6"
+          class="card-img-top"
+          alt="Картинка светильника"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ titleImg6Card4 }}</h5>
+          <a
+            (click)="clickInfoImg6CardLine5()"
+            class="btn btnStyleLights btnCustomImgCard4 btn-primary"
+            >Подробней</a
+          >
+          <a
+            (click)="modalView = true"
+            class="btn btnStyleLights btnCustom2ImgCard4 btn-secondary"
+            >{{ btnBuy }}</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-card-buy
+  *ngIf="modalView"
+  title="Информация о заказе"
+  (close)="modalView = false"
+></app-card-buy>
+
+<!-- <div class="containerMajorScreen">
+    <div class="cardM card1">
+        <div class="cardMajorScreen">
+            <img class="imgCardStyle" [src]="imgUrlNBB" alt="" />
+            <pre class="cardTitle">Светильник для бани и сауны IP65</pre>
+            <button class="btnCard2">Подробней</button>
+        </div>
+    </div>
+
+    <div class="cardM card2">
+        <div class="cardMajorScreen">
+            <img class="imgCardStyle" [src]="imgUrlNBB" alt="" />
+            <pre class="cardTitle">Светильник для бани и сауны IP65</pre>
+            <button class="btnCard2">Подробней</button>
+        </div>
+    </div>
+
+    <div class="cardM card3">
+        <div class="cardMajorScreen">
+            <img class="imgCardStyle" [src]="imgUrlNBB" alt="" />
+            <pre class="cardTitle">Светильник для бани и сауны IP65</pre>
+            <button class="btnCard2">Подробней</button>
+        </div>
+    </div>
+
+    <div class="cardM card4">
+        <div class="cardMajorScreen">
+            <img class="imgCardStyle" [src]="imgUrlNBB" alt="" />
+            <pre class="cardTitle">Светильник для бани и сауны IP65</pre>
+            <button class="btnCard2">Подробней</button>
+        </div>
+    </div>
+
+    <div class="cardM card4">
+        <div class="cardMajorScreen">
+            <img class="imgCardStyle" [src]="imgUrlNBB" alt="" />
+            <pre class="cardTitle">Светильник для бани и сауны IP65</pre>
+            <button class="btnCard2">Подробней</button>
+        </div>
+    </div>
+</div>
+
+<div class="containerMajorScreen">
+    <div class="cardM card1">
+        <div class="cardMajorScreen">
+            <img class="imgCardStyle" [src]="imgUrlNBB" alt="" />
+            <pre class="cardTitle">Светильник для бани и сауны IP65</pre>
+            <button class="btnCard2">Подробней</button>
+        </div>
+    </div>
+
+    <div class="cardM card2">
+        <div class="cardMajorScreen">
+            <img class="imgCardStyle" [src]="imgUrlNBB" alt="" />
+            <pre class="cardTitle">Светильник для бани и сауны IP65</pre>
+            <button class="btnCard2">Подробней</button>
+        </div>
+    </div>
+
+    <div class="cardM card3">
+        <div class="cardMajorScreen">
+            <img class="imgCardStyle" [src]="imgUrlNBB" alt="" />
+            <pre class="cardTitle">Светильник для бани и сауны IP65</pre>
+            <button class="btnCard2">Подробней</button>
+        </div>
+    </div>
+
+    <div class="cardM card4">
+        <div class="cardMajorScreen">
+            <img class="imgCardStyle" [src]="imgUrlNBB" alt="" />
+            <pre class="cardTitle">Светильник для бани и сауны IP65</pre>
+            <button class="btnCard2">Подробней</button>
+        </div>
+    </div>
+</div> -->

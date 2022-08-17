@@ -1,0 +1,112 @@
+.backFon {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.btnOrderStyls {
+    left: 63%;
+}
+
+.formsBuy {
+    width: 500px;
+    padding: 1rem;
+    margin-top: 3rem;
+    background: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+@media (min-width: 575px) and (max-width: 585px) {
+    .formsBuy {
+        width: 400px;
+        margin-left: -37px;
+    }
+    .btnOrderStyls {
+        margin-left: -85px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1024px) {
+    .btn-secondary[_ngcontent-las-c50] {
+        margin-left: -60px;
+    }
+}
+
+@media (min-width: 2560px) and (max-width: 2560px) {
+    .input-group-text {
+        font-size: 35px;
+    }
+    .form-control {
+        font-size: 48px;
+    }
+    .btn {
+        font-size: 40px;
+    }
+    .formsBuy {
+        width: 1500px;
+        height: 500px;
+    }
+    .btnOrderStyls {
+        left: 76%;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1440px) {
+    .form-control {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1024px) {
+    .mediaStyle {
+        width: 700px;
+        height: 300px;
+    }
+    .btnOrderStyls {
+        left: 75%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 768px) {
+    .formsBuy {
+        width: 500px;
+    }
+    .btnOrderStyls {
+        left: 64%;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 435px) {
+    .btnOrderStyls {
+        left: 47%;
+    }
+    .formsBuy {
+        width: 350px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 385px) {
+    .btnOrderStyls {
+        left: 37%;
+        border-radius: 10px;
+    }
+    .formsBuy {
+        width: 300px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 330px) {
+    .btnOrderStyls {
+        left: 37%;
+        border-radius: 10px;
+    }
+    .formsBuy {
+        width: 300px;
+        margin-left: 1px;
+    }
+}

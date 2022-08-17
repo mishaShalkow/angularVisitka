@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+@media (min-width: 425px) {
+    html {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+@media (min-width: 375px) {
+    html {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+@media (min-width: 320px) {
+    html {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}

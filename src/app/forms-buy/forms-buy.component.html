@@ -1,0 +1,76 @@
+<form #myForm="ngForm" class="ng-pristine ng-untouched ng-valid" novalidate="" action="../user.service.ts" method="post" (ngSubmit)="onSubmit(myForm)">
+    <div class="backFon">
+        <div class="input-group mediaStyle formsBuy">
+            <!--       <span class="input-group-text">First and last name</span>
+        <input type="text" aria-label="First name" class="form-control" />
+        <input type="text" aria-label="Last name" class="form-control" /> -->
+            <div class="input-group input-group-sm mb-3">
+                <label class="input-group-text" id="inputGroup-sizing-sm">Введите имя</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-sm"
+          [(ngModel)]="firstName"
+          name="firstName"
+        />
+      </div>
+
+      <div class="input-group input-group-sm mb-3">
+        <label class="input-group-text" id="inputGroup-sizing-sm"
+          >Введите название позиции</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-sm"
+          name="positionName"
+          ngModel
+        />
+      </div>
+      <div class="input-group input-group-sm mb-3">
+        <label class="input-group-text" id="inputGroup-sizing-sm"
+          >Введите кол-во</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-sm"
+          name="amountPosition"
+          ngModel
+        />
+      </div>
+      <div class="input-group input-group-sm mb-3">
+        <label class="input-group-text" id="inputGroup-sizing-sm"
+          >Укажите ваш телефон</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-sm"
+          ngModel
+          name="phoneCustomer"
+        />
+      </div>
+      <button
+        href="submit"
+        class="btn btn-primary"
+        [disabled]="myForm.invalid"
+        (click)="submit(myForm)"
+      >
+        {{buyOrderPosition}}
+      </button>
+      <button
+        href="#"
+        (click)="close.emit()"
+        class="btn btnOrderStyls btn-secondary"
+      >
+        Закрыть
+      </button>
+    </div>
+  </div>
+</form>
