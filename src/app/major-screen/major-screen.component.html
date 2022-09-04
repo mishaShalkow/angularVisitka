@@ -10,12 +10,10 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ titleImg1Card1 }}</h5>
 
-                    <a (click)="clickInfo()" id="informId" class="btn btnStyleLights btn-primary">{{ information }}</a
-          >
-          <a
-            (click)="modalView = true"
-            class="btn btnMediaW575 btnStyleLights btn-secondary"
-            >{{ btnBuy }}</a
+                    <a (click)="clickInfo()" class="btn btnStyleLights btn-primary">{{
+            information
+          }}</a>
+                    <a (click)="modalView = true" class="btn btnMediaW575 btnStyleLights btn-secondary">{{ btnBuy }}</a
           >
         </div>
       </div>
@@ -182,7 +180,7 @@
 
     <!--        image 4 card 2 -->
     <div class="col">
-      <div class="card" *ngIf="visibleCard">
+      <div class="card">
         <img
           [src]="imgUrlCard2Img4"
           class="card-img-top"
@@ -192,12 +190,10 @@
           <h5 class="card-title">{{ titleImg4Card2 }}</h5>
           <a
             (click)="clickInfoImg4Card2()"
-            (click)="poupvisible()"
             class="btn btnStyleLights btn-primary"
             >Подробней</a
           >
           <a
-            (click)="poupvisible()"
             (click)="modalView = true"
             class="btn btnStyleLights btn-secondary"
             >{{ btnBuy }}</a
@@ -373,7 +369,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ titleImg1Card4 }}</h5>
           <a
-            (click)="clickInfoImg1CardLine5()"
+            (click)="clickInfoImg1Card4()"
             class="btn btnStyleLights btn-primary"
             >Подробней</a
           >
@@ -396,7 +392,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ titleImg2Card4 }}</h5>
           <a
-            (click)="clickInfoImg2CardLine5()"
+            (click)="clickInfoImg2Card4()"
             class="btn btnStyleLights btn-primary"
             >Подробней</a
           >
@@ -419,7 +415,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ titleImg3Card4 }}</h5>
           <a
-            (click)="clickInfoImg3CardLine5()"
+            (click)="clickInfoImg3Card4()"
             class="btn btnStyleLights btn-primary"
             >Подробней</a
           >
@@ -442,7 +438,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ titleImg4Card4 }}</h5>
           <a
-            (click)="clickInfoImg4CardLine5()"
+            (click)="clickInfoImg4Card4()"
             class="btn btnStyleLights btnCustomImgCard4 btn-primary"
             >Подробней</a
           >
@@ -465,7 +461,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ titleImg5Card4 }}</h5>
           <a
-            (click)="clickInfoImg5CardLine5()"
+            (click)="clickInfoImg5Card4()"
             class="btn btnStyleLights btnCustomImgCard4 btn-primary"
             >Подробней</a
           >
@@ -488,7 +484,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ titleImg6Card4 }}</h5>
           <a
-            (click)="clickInfoImg6CardLine5()"
+            (click)="clickInfoImg6Card4()"
             class="btn btnStyleLights btnCustomImgCard4 btn-primary"
             >Подробней</a
           >

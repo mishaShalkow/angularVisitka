@@ -1,0 +1,32 @@
+<!-- <div class="cardsContainer">
+    <img [src]="product.titleeImg" class="cardContainerImg" />
+    <h5 class="cardContainerTitle">{{ product.titleCard }}</h5>
+    <button class="cardContainerBtnAbout">{{ product.btnAboutProduct }}</button>
+    <button class="cardContainerBtnBuy">{{ product.btnBuy }}</button>
+    <div class="cardContainerInform">
+        <p class="productInform">{{ product.informationProduct }}</p>
+    </div>
+</div> -->
+
+<div class="container my-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
+        <div class="col">
+            <div class="card">
+                <img [src]="product.titleImg" class="card-img-top" alt="Картинка светильника" />
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.titleCard }}</h5>
+
+                    <button (click)="condition = !condition" class="btn btnStyleLights btn-primary">
+            {{ condition ? "Скрыть " : "Подробней " }}
+          </button>
+                    <div *ngIf="condition" class="informationProducts">
+                        <h5 class="card-title">{{ product.informationProduct }}</h5>
+                    </div>
+                    <button class="btn btnMediaW575 btnStyleLights btn-secondary">
+            {{ product.btnBuy }}
+          </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

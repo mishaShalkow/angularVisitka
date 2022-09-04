@@ -9,6 +9,7 @@ import { MajorScreenComponent } from './major-screen/major-screen.component';
 import { CardBuyComponent } from './card-buy/card-buy.component';
 import { FormsBuyComponent } from './forms-buy/forms-buy.component';
 import { WindowContactComponent } from './window-contact/window-contact.component';
+import { CardProductComponent } from './card-product/card-product.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +19,10 @@ import { WindowContactComponent } from './window-contact/window-contact.componen
     CardBuyComponent,
     WindowContactComponent,
     FormsBuyComponent,
+    CardProductComponent,
   ],
   entryComponents: [CardBuyComponent, FormsBuyComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

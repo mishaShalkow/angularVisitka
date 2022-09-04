@@ -8,9 +8,8 @@ describe('MajorScreenComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MajorScreenComponent ]
-    })
-    .compileComponents();
+      declarations: [MajorScreenComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MajorScreenComponent);
     component = fixture.componentInstance;

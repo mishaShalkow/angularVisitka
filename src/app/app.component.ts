@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
 import { NgModule } from '@angular/core';
-import { Userservice } from './user.service';
+import { products as date } from './data/cardObj';
+import { IProduct } from './models/cardProduct';
+import { OnInit } from '@angular/core';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [Userservice]
 })
-export class AppComponent {
-  constructor(private userService: Userservice) {}
+export class AppComponent implements OnInit {
+  products: IProduct[] = date;
+  constructor() {}
+
+  ngOnInit(): void {}
 }
