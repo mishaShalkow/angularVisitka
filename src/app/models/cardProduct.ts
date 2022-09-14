@@ -1,6 +1,8 @@
 export interface IProduct {
-  titleImg: string;
+  id: number;
+  price: number;
+  titleImg?: string;
   titleCard: string;
-  btnBuy: string;
-  informationProduct: string;
+  btnBuy?: string;
+  informationProduct?: string;
 }

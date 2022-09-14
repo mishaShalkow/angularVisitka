@@ -5,7 +5,7 @@
         <input type="text" aria-label="First name" class="form-control" />
         <input type="text" aria-label="Last name" class="form-control" /> -->
             <div class="input-group input-group-sm mb-3">
-                <label class="input-group-text" id="inputGroup-sizing-sm">Введите имя</label
+                <label class="input-group-text" id="inputGroup-sizing-sm">Введите имя и фамилию</label
         >
         <input
           type="text"
@@ -19,7 +19,7 @@
 
       <div class="input-group input-group-sm mb-3">
         <label class="input-group-text" id="inputGroup-sizing-sm"
-          >Введите название позиции</label
+          >Введите адрес доставки</label
         >
         <input
           type="text"
@@ -32,7 +32,7 @@
       </div>
       <div class="input-group input-group-sm mb-3">
         <label class="input-group-text" id="inputGroup-sizing-sm"
-          >Введите кол-во</label
+          >Укажите номер отправки</label
         >
         <input
           type="text"
@@ -45,7 +45,7 @@
       </div>
       <div class="input-group input-group-sm mb-3">
         <label class="input-group-text" id="inputGroup-sizing-sm"
-          >Укажите ваш телефон</label
+          >Выберите способ доставки</label
         >
         <input
           type="text"
@@ -62,7 +62,7 @@
         [disabled]="myForm.invalid"
         (click)="submit(myForm)"
       >
-        {{buyOrderPosition}}
+        {{ buyOrderPosition }}
       </button>
       <button
         href="#"

@@ -16,13 +16,13 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ product.titleCard }}</h5>
 
-                    <button (click)="condition = !condition" class="btn btnStyleLights btn-primary">
+                    <button (click)="informAbout = true" class="btn btnStyleLights btn-primary">
             {{ condition ? "Скрыть " : "Подробней " }}
           </button>
                     <div *ngIf="condition" class="informationProducts">
                         <h5 class="card-title">{{ product.informationProduct }}</h5>
                     </div>
-                    <button class="btn btnMediaW575 btnStyleLights btn-secondary">
+                    <button (click)="addToCart(product)" class="btn btnMediaW575 btnStyleLights btn-secondary">
             {{ product.btnBuy }}
           </button>
                 </div>
@@ -30,3 +30,5 @@
         </div>
     </div>
 </div>
+
+<app-information-about-shops *ngIf="informAbout" (close)="informAbout = false"></app-information-about-shops>

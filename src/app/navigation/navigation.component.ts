@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
   windowContact = false;
+  CartShops = false;
+  modalView = false;
   urlInterprace = 'https://svet-vitebsk.by/';
 
   urlAvitoPeopleSay =

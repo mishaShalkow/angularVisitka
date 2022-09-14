@@ -10,6 +10,7 @@ import { CardBuyComponent } from './card-buy/card-buy.component';
 import { FormsBuyComponent } from './forms-buy/forms-buy.component';
 import { WindowContactComponent } from './window-contact/window-contact.component';
 import { CardProductComponent } from './card-product/card-product.component';
+import { InformationAboutShopsComponent } from './information-about-shops/information-about-shops.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CardProductComponent } from './card-product/card-product.component';
     WindowContactComponent,
     FormsBuyComponent,
     CardProductComponent,
+    InformationAboutShopsComponent,
   ],
   entryComponents: [CardBuyComponent, FormsBuyComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],

@@ -1,4 +1,5 @@
 <app-window-contact *ngIf="windowContact" (close)="windowContact = false"></app-window-contact>
+<app-card-buy *ngIf="modalView" title="Информация о заказе" (close)="modalView = false"></app-card-buy>
 
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container">
@@ -22,7 +23,10 @@
             >Контакты</a
           >
         </li>
-      </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="#" (click)="modalView = true">Корзина</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>

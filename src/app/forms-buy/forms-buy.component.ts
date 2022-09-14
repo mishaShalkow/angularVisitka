@@ -19,7 +19,7 @@ export class FormsBuyComponent implements OnInit {
     console.log(form);
   }
 
-  buyOrderPosition = 'Заказать';
+  buyOrderPosition = 'Оформить заказ';
   @Input() title = 'Заполните заявку';
   @Output() close = new EventEmitter<void>();
   constructor() {}

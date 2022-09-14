@@ -5,14 +5,15 @@
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 .btnOrderStyls {
-    left: 63%;
+    left: 73%;
 }
 
 .formsBuy {
-    width: 500px;
+    width: 900px;
     padding: 1rem;
     margin-top: 3rem;
     background: white;

@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { IProduct } from '../models/cardProduct';
+import { CartServiceService } from '../Service/cart-service.service';
+import { cartItem } from '../models/cart';
 
 @Component({
   selector: 'app-card-product',
@@ -8,7 +10,14 @@ import { IProduct } from '../models/cardProduct';
 })
 export class CardProductComponent implements OnInit {
   condition = false;
+  informAbout = false;
   @Input() product: IProduct;
+  @Output() close = new EventEmitter<void>();
+
+  addToCart(product: any) {
+    window.alert('you add a shops to cart');
+    this.cartService.addToCard(product);
+  }
   /* modalView = false;
   imgUrlNBB =
     'https://75.img.avito.st/image/1/1.VpyAvLax-nW2C3h4oLEIz2kf-nE8HfB3.kt2OAD6vju7t1M6eamqK5mh-9lGufsGyrtWkWDagKJ4';
@@ -25,7 +34,7 @@ export class CardProductComponent implements OnInit {
       this.titleImg1Card1 = '';
     } */
   /*   } */
-  constructor() {}
+  constructor(private cartService: CartServiceService) {}
 
   ngOnInit(): void {}
 }
