@@ -8,10 +8,16 @@ import { cartItem } from '../models/cart';
   providedIn: 'root',
 })
 export class CartServiceService {
+  public quantity: number = 0;
   items: IProduct[] = [];
+  price: IProduct[] = [];
+  id: number;
 
   addToCard(products: IProduct) {
     this.items.push(products);
+    if (this.id === products.id) {
+      this.quantity++;
+    }
   }
 
   getItems() {
@@ -22,6 +28,8 @@ export class CartServiceService {
     this.items = [];
     return this.items;
   }
+
+  getSum() {}
 
   constructor() {}
 }

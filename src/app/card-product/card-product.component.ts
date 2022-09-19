@@ -18,6 +18,7 @@ export class CardProductComponent implements OnInit {
     window.alert('you add a shops to cart');
     this.cartService.addToCard(product);
   }
+
   /* modalView = false;
   imgUrlNBB =
     'https://75.img.avito.st/image/1/1.VpyAvLax-nW2C3h4oLEIz2kf-nE8HfB3.kt2OAD6vju7t1M6eamqK5mh-9lGufsGyrtWkWDagKJ4';

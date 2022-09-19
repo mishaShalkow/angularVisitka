@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { CartServiceService } from '../Service/cart-service.service';
+import { IProduct } from '../models/cardProduct';
 
 @Component({
   selector: 'app-card-buy',
@@ -11,9 +12,11 @@ export class CardBuyComponent implements OnInit {
   formsBuy = false;
   @Input() title = 'Информация для заказа';
   @Output() close = new EventEmitter<void>();
+
   constructor(private cartServiceService: CartServiceService) {
     this.items = this.cartServiceService.getItems();
   }
+  getsSum(products: IProduct[]) {}
 
   ngOnInit(): void {}
 }
