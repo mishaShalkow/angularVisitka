@@ -13,10 +13,16 @@ export class CardBuyComponent implements OnInit {
   @Input() title = 'Информация для заказа';
   @Output() close = new EventEmitter<void>();
 
+  clearCart() {
+    this.items = [];
+    return this.items;
+  }
+
   constructor(private cartServiceService: CartServiceService) {
     this.items = this.cartServiceService.getItems();
+    /* this.items = this.cartServiceService.clearCart(); */
   }
-  getsSum(products: IProduct[]) {}
+  /*   getsSum(products: IProduct[]) {} */
 
   ngOnInit(): void {}
 }

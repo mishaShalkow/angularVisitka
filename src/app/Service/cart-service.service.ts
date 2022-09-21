@@ -29,7 +29,6 @@ export class CartServiceService {
     return this.items;
   }
 
-  getSum() {}
-
+  getSum(products: IProduct) {}
   constructor() {}
 }

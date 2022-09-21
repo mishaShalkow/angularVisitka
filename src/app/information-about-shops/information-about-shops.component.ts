@@ -9,7 +9,6 @@ import { products as date } from '../data/cardObj';
 })
 export class InformationAboutShopsComponent implements OnInit {
   formsBuy = false;
-
   products: IProduct[] = date;
   @Input() product: IProduct;
   @Output() close = new EventEmitter<void>();

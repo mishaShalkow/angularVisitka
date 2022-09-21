@@ -3,19 +3,53 @@
         <div class="card-header">
             <ul class="nav nav-pills card-header-pills">
                 <li class="nav-item">
-                    <a class="nav-link informTitle active" href="/">Вернуться к выбору товара</a
+                    <a class="nav-link informTitle active" (click)="close.emit()">Вернуться к выбору товара</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link completeFormByu" (click)="formsBuy = true" href="#"
-            >перейти к оформелнию</a
+          <a class="nav-link completeFormByu" (click)="clearCart()" href="#"
+            >Очистить корзину</a
           >
         </li>
       </ul>
-      <div *ngFor="let item of items">
-        <p>Наименование товара: {{ item.titleCard }}</p>
-        <span>Цена: {{ item.price }}</span>
+      <div class="container">
+        <h2>Группа компаний свет</h2>
+        <br />
+        <div class="table-responsive">
+          <table class="table table-hover table-bordered">
+            <thead>
+              <tr>
+                <th>Артикул</th>
+                <th>Название</th>
+                <th>Цена</th>
+                <th>Количество</th>
+                <th>Сумма</th>
+              </tr>
+            </thead>
+            <thead id="cart" *ngFor="let item of items">
+              <tr>
+                <th>{{ item.id }}</th>
+                <th>{{ item.titleCard }}</th>
+                <th>{{ item.price }}</th>
+                <th>1</th>
+                <th>{{ item.price }}</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div>Итого: <span id="total-cart-summa">250</span> руб.</div>
+        <br />
+        <button id="order" class="btn btn-info" (click)="formsBuy = true">
+          Оформить заказ
+        </button>
       </div>
+      <!--    <div *ngFor="let item of items">
+        <p>Наименование товара:</p>
+        <span>{{ item.titleCard }}</span>
+        <p>Цена:</p>
+        <span>{{ item.price }}</span>
+        <span>ИТОГО: </span>
+      </div> -->
     </div>
   </div>
 </div>
