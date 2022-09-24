@@ -11,6 +11,7 @@ import { FormsBuyComponent } from './forms-buy/forms-buy.component';
 import { WindowContactComponent } from './window-contact/window-contact.component';
 import { CardProductComponent } from './card-product/card-product.component';
 import { InformationAboutShopsComponent } from './information-about-shops/information-about-shops.component';
+import { FilterShopsPipe } from './pipes/filter-shops.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { InformationAboutShopsComponent } from './information-about-shops/inform
     FormsBuyComponent,
     CardProductComponent,
     InformationAboutShopsComponent,
+    FilterShopsPipe,
   ],
   entryComponents: [CardBuyComponent, FormsBuyComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],

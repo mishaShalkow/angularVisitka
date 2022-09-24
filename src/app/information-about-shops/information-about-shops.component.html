@@ -16,20 +16,14 @@
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link completeFormByu" href="./forms-buy.component.html"
-            >В корзину</a
-          >
-        </li>
-      </ul>
+          <a class="nav-link completeFormByu" href="">В корзину</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </div>
 
-<app-forms-buy
-  *ngIf="formsBuy"
-  title="Заполните заявку"
-  (close)="formsBuy = false"
-></app-forms-buy>
+<app-forms-buy *ngIf="formsBuy" title="Заполните заявку" (close)="formsBuy = false"></app-forms-buy>
 
 <!-- <app-card-product *ngFor="let product of products" [product]="product">
 </app-card-product> -->

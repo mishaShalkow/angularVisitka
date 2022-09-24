@@ -10,6 +10,7 @@ import { OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+  term = '';
   products: IProduct[] = date;
   constructor() {}
 

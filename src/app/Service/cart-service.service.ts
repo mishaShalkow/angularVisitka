@@ -10,7 +10,8 @@ import { cartItem } from '../models/cart';
 export class CartServiceService {
   public quantity: number = 0;
   items: IProduct[] = [];
-  price: IProduct[] = [];
+  totalPrice = 0;
+  price: IProduct[];
   id: number;
 
   addToCard(products: IProduct) {
@@ -29,6 +30,8 @@ export class CartServiceService {
     return this.items;
   }
 
-  getSum(products: IProduct) {}
+  getSum(products: IProduct) {
+    this.totalPrice += Number(this.price);
+  }
   constructor() {}
 }
