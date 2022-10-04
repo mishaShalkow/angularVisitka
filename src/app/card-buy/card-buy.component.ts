@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { CartServiceService } from '../Service/cart-service.service';
 import { IProduct } from '../models/cardProduct';
-import { products } from '../data/cardObj';
+import { products as date } from '../data/cardObj';
 
 @Component({
   selector: 'app-card-buy',
@@ -10,29 +10,46 @@ import { products } from '../data/cardObj';
 })
 export class CardBuyComponent implements OnInit {
   items;
-  products;
+  products: IProduct[] = date;
+  /*   price: typeof products; */
   formsBuy = false;
   @Input() title = 'Информация для заказа';
   @Output() close = new EventEmitter<void>();
-  totalPrice: any = 0;
-  quantity = 1;
+  quantity: number = 1;
+
+  getSumShops(product: IProduct) {
+    let sumShops = product.count * product.price;
+    return sumShops;
+  }
 
   clearCart() {
     this.items = [];
     return this.items;
   }
 
-  getTotalSum() {
-    this.totalPrice += this.totalPrice;
+  getPlusCount() {
+    this.quantity++;
   }
 
+  getMinusCount() {
+    this.quantity--;
+    if (this.quantity <= 1) {
+      this.quantity = 1;
+    }
+  }
+
+  /*   getCountShops() {
+    let totalPrice = this.quantity * this.products[].price;
+    return totalPrice;
+  } */
+  /*   getSum() {
+    return (this.quantity *= Number(this.price));
+  }
+ */
   constructor(private cartServiceService: CartServiceService) {
     this.items = this.cartServiceService.getItems();
-    /*  this.products = this.cartServiceService.getSum(this.price); */
-
-    /* this.items = this.cartServiceService.clearCart(); */
+    /* (this.products = this.cartServiceService.getCountShops()); */
   }
-  /*   getsSum(products: IProduct[]) {} */
 
   ngOnInit(): void {}
 }

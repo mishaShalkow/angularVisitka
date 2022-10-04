@@ -19,9 +19,10 @@
                     <button (click)="informAbout = true" class="btn btnStyleLights btn-primary">
             {{ condition ? "Скрыть " : "Подробней " }}
           </button>
-                    <div *ngIf="condition" class="informationProducts">
+
+                    <!--       <div *ngIf="condition" class="informationProducts">
                         <h5 class="card-title">{{ product.informationProduct }}</h5>
-                    </div>
+                    </div> -->
                     <button (click)="addToCart(product)" class="btn btnMediaW575 btnStyleLights btn-secondary">
             {{ product.btnBuy }}
           </button>
