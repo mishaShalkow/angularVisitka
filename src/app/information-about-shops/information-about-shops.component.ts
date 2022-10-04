@@ -8,7 +8,9 @@ import { products as date } from '../data/cardObj';
   styleUrls: ['./information-about-shops.component.scss'],
 })
 export class InformationAboutShopsComponent implements OnInit {
+  informAbout = false;
   formsBuy = false;
+
   products: IProduct[] = date;
   @Input() product: IProduct;
   @Output() close = new EventEmitter<void>();

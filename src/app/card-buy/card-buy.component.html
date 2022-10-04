@@ -31,15 +31,23 @@
                 <th>{{ item.id }}</th>
                 <th>{{ item.titleCard }}</th>
                 <th>{{ item.price }}</th>
-                <th>{{ quantity }}</th>
-                <th>{{ item.price }}</th>
+                <th>
+                  <button (click)="getMinusCount()" class="btn btn-minus">
+                    -</button
+                  >{{ item.count
+                  }}<button (click)="getPlusCount()" class="btn btn-plus">
+                    +
+                  </button>
+                </th>
+                <th>{{ 0 }}</th>
               </tr>
             </thead>
           </table>
         </div>
         <div>
           Итого:
-          <span id="total-cart-summa">{{ getTotalSum }}</span> руб.
+          <span id="total-cart-summa">{{ 0 }}</span>
+          руб.
         </div>
         <br />
         <button id="order" class="btn btn-info" (click)="formsBuy = true">

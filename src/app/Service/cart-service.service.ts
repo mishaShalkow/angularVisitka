@@ -1,25 +1,40 @@
 import { Injectable } from '@angular/core';
 import { IProduct } from '../models/cardProduct';
-import { products } from '../data/cardObj';
+import { products as date } from '../data/cardObj';
 import { CardProductComponent } from '../card-product/card-product.component';
-import { cartItem } from '../models/cart';
+import { count, identity } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartServiceService {
-  public quantity: number = 0;
   items: IProduct[] = [];
-  totalPrice = 0;
   price: IProduct[];
-  id: number;
+  setCount: boolean;
+
+  /*   getCountShops = () => this.quantity * Number(this.price); */
+
+  getCountShops(products: IProduct) {
+    if (products.id === products.id) {
+      products.count++;
+    }
+  }
 
   addToCard(products: IProduct) {
     this.items.push(products);
-    if (this.id === products.id) {
-      this.quantity++;
-    }
+    this.getCountShops(products);
+    /* this.items.push(products); */
+    /*     if (products.id !== products.id) {
+      this.items.push(products);
+    } else if (products.id === products.id) {
+      products.count++;
+    } */
   }
+  /* plusCountShops(products: IProduct) {
+    if (products.id = products.id) {
+      products.count++
+    }
+  } */
 
   getItems() {
     return this.items;
@@ -30,8 +45,5 @@ export class CartServiceService {
     return this.items;
   }
 
-  getSum(products: IProduct) {
-    this.totalPrice += Number(this.price);
-  }
   constructor() {}
 }

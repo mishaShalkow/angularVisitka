@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { IProduct } from '../models/cardProduct';
 import { CartServiceService } from '../Service/cart-service.service';
-import { cartItem } from '../models/cart';
+import { products as date } from '../data/cardObj';
 
 @Component({
   selector: 'app-card-product',
@@ -11,14 +11,20 @@ import { cartItem } from '../models/cart';
 export class CardProductComponent implements OnInit {
   condition = false;
   informAbout = false;
+  formsBuy = false;
+  products: IProduct[] = date;
   @Input() product: IProduct;
   @Output() close = new EventEmitter<void>();
 
-  addToCart(product: any) {
-    window.alert('you add a shops to cart');
+  addToCart(product: IProduct) {
+    window.alert('Вы добавили товар в корзину');
     this.cartService.addToCard(product);
   }
 
+  getSumShops(product: IProduct) {
+    let sumShops = product.count * product.price;
+    return sumShops;
+  }
   /* modalView = false;
   imgUrlNBB =
     'https://75.img.avito.st/image/1/1.VpyAvLax-nW2C3h4oLEIz2kf-nE8HfB3.kt2OAD6vju7t1M6eamqK5mh-9lGufsGyrtWkWDagKJ4';

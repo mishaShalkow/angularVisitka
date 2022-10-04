@@ -4,6 +4,7 @@ export const products: IProduct[] = [
   {
     id: 1,
     price: 250,
+    count: 0,
     titleImg:
       'https://75.img.avito.st/image/1/1.VpyAvLax-nW2C3h4oLEIz2kf-nE8HfB3.kt2OAD6vju7t1M6eamqK5mh-9lGufsGyrtWkWDagKJ4',
     titleCard: 'Светильник для бани и сауны IP65',
@@ -14,6 +15,7 @@ export const products: IProduct[] = [
   {
     id: 2,
     price: 350,
+    count: 0,
     titleImg:
       'https://svet-vitebsk.by/wp-content/uploads/2022/01/krug-belyj-1.jpg',
     titleCard: 'СВЕТИЛЬНИК НБП 03-60(100)-001 УХЛ1',
@@ -24,6 +26,7 @@ export const products: IProduct[] = [
   {
     id: 3,
     price: 250,
+    count: 0,
     titleImg:
       'https://svet-vitebsk.by/wp-content/uploads/2022/01/krug-belyj-reshetka.jpg',
     titleCard: 'СВЕТИЛЬНИК НБП 03-60(100)-002 УХЛ1',
@@ -34,6 +37,7 @@ export const products: IProduct[] = [
   {
     id: 4,
     price: 250,
+    count: 0,
     titleImg:
       'https://svet-vitebsk.by/wp-content/uploads/2022/01/nbp_04_60_001_white.jpg',
     titleCard: 'СВЕТИЛЬНИК НБП 04-60(100)-001 УХЛ1',
@@ -44,6 +48,7 @@ export const products: IProduct[] = [
   {
     id: 5,
     price: 250,
+    count: 0,
     titleImg:
       'https://svet-vitebsk.by/wp-content/uploads/2022/01/bannik-oval-reshetka-belyj1.jpg',
     titleCard: 'СВЕТИЛЬНИК НБП 04-60(100)-002 УХЛ1',
@@ -54,6 +59,7 @@ export const products: IProduct[] = [
   {
     id: 6,
     price: 250,
+    count: 0,
     titleImg:
       'https://svet-vitebsk.by/wp-content/uploads/2022/01/molochnyj-gladkij.jpg',
     titleCard: 'СВЕТИЛЬНИК НТУ 01-ХХ-ХХ1, ОПАЛ',
@@ -64,6 +70,7 @@ export const products: IProduct[] = [
   {
     id: 7,
     price: 250,
+    count: 0,
     titleImg:
       'https://svet-vitebsk.by/wp-content/uploads/2022/01/dymchatyj-gladkij.jpg',
     titleCard: 'СВЕТИЛЬНИК НТУ 01-ХХ-ХХ5, ДЫМЧАТЫЙ',
@@ -74,6 +81,7 @@ export const products: IProduct[] = [
   {
     id: 8,
     price: 250,
+    count: 0,
     titleImg:
       'https://svet-vitebsk.by/wp-content/uploads/2022/01/zolotoj-gladkij.jpg',
     titleCard: 'СВЕТИЛЬНИК НТУ 02-ХХ-ХХ3, ЗОЛОТОЙ',
@@ -84,6 +92,7 @@ export const products: IProduct[] = [
   {
     id: 9,
     price: 250,
+    count: 0,
     titleImg:
       'https://svet-vitebsk.by/wp-content/uploads/2022/01/prozrachnyj-gladkij.jpg',
     titleCard: 'СВЕТИЛЬНИК НТУ 02-ХХ-ХХ2, ПРОЗРАЧНЫЙ',
@@ -94,6 +103,7 @@ export const products: IProduct[] = [
   {
     id: 10,
     price: 250,
+    count: 0,
     titleImg: 'https://svet-vitebsk.by/wp-content/uploads/2022/01/60343-11.jpg',
     titleCard: 'СВЕТИЛЬНИК НТУ 01-60-25Х,C ПОДСТАВКОЙ',
     btnBuy: 'Заказать',
@@ -103,6 +113,7 @@ export const products: IProduct[] = [
   {
     id: 11,
     price: 250,
+    count: 0,
     titleImg:
       'https://svet-vitebsk.by/wp-content/uploads/2022/03/img_3093-kopija.png',
     titleCard: 'СВЕТИЛЬНИК SPO-SVET-36-1200-6500',
@@ -113,6 +124,7 @@ export const products: IProduct[] = [
   {
     id: 12,
     price: 250,
+    count: 0,
     titleImg:
       'https://svet-vitebsk.by/wp-content/uploads/2022/01/img_3064-kopija.png',
     titleCard: 'СВЕТИЛЬНИК SPO-SVET-18-600-6500',
@@ -123,6 +135,7 @@ export const products: IProduct[] = [
   {
     id: 13,
     price: 250,
+    count: 0,
     titleImg: 'https://svet-vitebsk.by/wp-content/uploads/2022/01/panell.png',
     titleCard: 'СВЕТИЛЬНИК ДПО 10-4Х8-001',
     btnBuy: 'Заказать',
@@ -132,6 +145,7 @@ export const products: IProduct[] = [
   {
     id: 14,
     price: 250,
+    count: 0,
     titleImg:
       'https://svet-vitebsk.by/wp-content/uploads/2022/01/lpo_12-2h18-012_uxl_4.jpg',
     titleCard: 'СВЕТИЛЬНИК ЛПО 12-2Х18-012 УХЛ4',
@@ -142,6 +156,7 @@ export const products: IProduct[] = [
   {
     id: 15,
     price: 250,
+    count: 0,
     titleImg: 'https://svet-vitebsk.by/wp-content/uploads/2022/02/009.jpg',
     titleCard: 'Светильник ДБО 15-15-001 УХЛ4',
     btnBuy: 'Заказать',
@@ -151,6 +166,7 @@ export const products: IProduct[] = [
   {
     id: 16,
     price: 250,
+    count: 0,
     titleImg: 'https://svet-vitebsk.by/wp-content/uploads/2022/03/0003-1.jpg',
     titleCard: 'Удлинитель силовой с розеткой',
     btnBuy: 'Заказать',
@@ -160,6 +176,7 @@ export const products: IProduct[] = [
   {
     id: 17,
     price: 250,
+    count: 0,
     titleImg: 'https://svet-vitebsk.by/wp-content/uploads/2022/03/003.jpg',
     titleCard: 'Удлинитель силовой на рамке с розеткой',
     btnBuy: 'Заказать',
@@ -169,6 +186,7 @@ export const products: IProduct[] = [
   {
     id: 18,
     price: 250,
+    count: 0,
     titleImg: 'https://svet-vitebsk.by/wp-content/uploads/2022/03/001-2.jpg',
     titleCard: 'Удлинитель на катушке (без розеток)',
     btnBuy: 'Заказать',
@@ -178,6 +196,7 @@ export const products: IProduct[] = [
   {
     id: 19,
     price: 250,
+    count: 0,
     titleImg: 'https://svet-vitebsk.by/wp-content/uploads/2022/03/img_0079.png',
     titleCard: 'Удлинитель на катушке с 4-мя розетками',
     btnBuy: 'Заказать',
@@ -187,6 +206,7 @@ export const products: IProduct[] = [
   {
     id: 20,
     price: 250,
+    count: 0,
     titleImg: 'https://svet-vitebsk.by/wp-content/uploads/2022/03/002-1.jpg',
     titleCard: 'Удлинитель на катушке с 4-мя розетками с/з',
     btnBuy: 'Заказать',
@@ -196,6 +216,7 @@ export const products: IProduct[] = [
   {
     id: 21,
     price: 250,
+    count: 0,
     titleImg: 'https://svet-vitebsk.by/wp-content/uploads/2022/03/002-3.jpg',
     titleCard: 'Удлинитель на катушке с 4-мя розетками без з/к',
     btnBuy: 'Заказать',
