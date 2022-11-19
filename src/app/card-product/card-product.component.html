@@ -1,12 +1,3 @@
-<!-- <div class="cardsContainer">
-    <img [src]="product.titleeImg" class="cardContainerImg" />
-    <h5 class="cardContainerTitle">{{ product.titleCard }}</h5>
-    <button class="cardContainerBtnAbout">{{ product.btnAboutProduct }}</button>
-    <button class="cardContainerBtnBuy">{{ product.btnBuy }}</button>
-    <div class="cardContainerInform">
-        <p class="productInform">{{ product.informationProduct }}</p>
-    </div>
-</div> -->
 
 <div class="container my-5">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5">
@@ -20,9 +11,6 @@
             {{ condition ? "Скрыть " : "Подробней " }}
           </button>
 
-                    <!--       <div *ngIf="condition" class="informationProducts">
-                        <h5 class="card-title">{{ product.informationProduct }}</h5>
-                    </div> -->
                     <button (click)="addToCart(product)" class="btn btnMediaW575 btnStyleLights btn-secondary">
             {{ product.btnBuy }}
           </button>
