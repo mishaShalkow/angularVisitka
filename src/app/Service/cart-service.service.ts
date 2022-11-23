@@ -9,10 +9,7 @@ import { count, identity } from 'rxjs';
 })
 export class CartServiceService {
   items: IProduct[] = [];
-  price: IProduct[];
-  setCount: boolean;
 
-  /*   getCountShops = () => this.quantity * Number(this.price); */
 
   getCountShops(products: IProduct) {
     if (products.id === products.id) {
@@ -23,26 +20,16 @@ export class CartServiceService {
   addToCard(products: IProduct) {
     this.items.push(products);
     this.getCountShops(products);
-    /* this.items.push(products); */
-    /*     if (products.id !== products.id) {
-      this.items.push(products);
-    } else if (products.id === products.id) {
-      products.count++;
-    } */
+ 
   }
-  /* plusCountShops(products: IProduct) {
-    if (products.id = products.id) {
-      products.count++
-    }
-  } */
 
   getItems() {
     return this.items;
   }
 
   clearCart() {
-    this.items = [];
-    return this.items;
+    this.items = []
+    return this.items
   }
 
   constructor() {}

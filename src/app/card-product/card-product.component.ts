@@ -2,6 +2,7 @@ import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { IProduct } from '../models/cardProduct';
 import { CartServiceService } from '../Service/cart-service.service';
 import { products as date } from '../data/cardObj';
+import { products } from '../data/cardObj';
 
 @Component({
   selector: 'app-card-product',
@@ -9,9 +10,7 @@ import { products as date } from '../data/cardObj';
   styleUrls: ['./card-product.component.scss'],
 })
 export class CardProductComponent implements OnInit {
-  condition = false;
   informAbout = false;
-  products: IProduct[] = date;
   @Input () product: IProduct;
   @Output() close = new EventEmitter<void>();
 

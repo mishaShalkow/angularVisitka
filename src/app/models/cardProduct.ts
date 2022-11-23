@@ -1,9 +1,9 @@
 export interface IProduct {
-  id?: number;
+  id: number;
   price: number;
   count: number;
-  titleImg?: string;
+  titleImg: string;
   titleCard: string;
-  btnBuy?: string;
-  informationProduct?: string;
+  btnBuy: string;
+  informationProduct: string;
 }

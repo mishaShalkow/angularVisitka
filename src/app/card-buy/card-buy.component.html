@@ -7,7 +7,7 @@
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link completeFormByu" (click)="clearCart()" href="#"
+          <a class="nav-link completeFormByu" href="#"
             >Очистить корзину</a
           >
         </li>
@@ -32,10 +32,10 @@
                 <th>{{ item.titleCard }}</th>
                 <th>{{ item.price }}</th>
                 <th>
-                  <button (click)="getMinusCount()" class="btn btn-minus">
+                  <button  class="btn btn-minus">
                     -</button
                   >{{ item.count
-                  }}<button (click)="getPlusCount()" class="btn btn-plus">
+                  }}<button class="btn btn-plus">
                     +
                   </button>
                 </th>
@@ -54,13 +54,6 @@
           Оформить заказ
         </button>
       </div>
-      <!--    <div *ngFor="let item of items">
-        <p>Наименование товара:</p>
-        <span>{{ item.titleCard }}</span>
-        <p>Цена:</p>
-        <span>{{ item.price }}</span>
-        <span>ИТОГО: </span>
-      </div> -->
     </div>
   </div>
 </div>

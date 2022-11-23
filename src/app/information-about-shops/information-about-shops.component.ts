@@ -1,6 +1,10 @@
-import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IProduct } from '../models/cardProduct';
+import { ActivatedRoute } from '@angular/router';
+import { products } from '../data/cardObj';
 import { products as date } from '../data/cardObj';
+import { CartServiceService } from '../Service/cart-service.service';
+
 
 @Component({
   selector: 'app-information-about-shops',
@@ -10,11 +14,15 @@ import { products as date } from '../data/cardObj';
 export class InformationAboutShopsComponent implements OnInit {
   informAbout = false;
   formsBuy = false;
-
-  products: IProduct[] = date;
-  @Input() product: IProduct;
   @Output() close = new EventEmitter<void>();
-  constructor() {}
+  @Input() product: IProduct;
+  constructor(
+    private route: ActivatedRoute,
+  ) {}
 
-  ngOnInit(): void {}
-}
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.product = products[+params.get('productId')]
+    })
+    
+  }}

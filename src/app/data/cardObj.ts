@@ -5,8 +5,7 @@ export const products: IProduct[] = [
     id: 1,
     price: 250,
     count: 0,
-    titleImg:
-      'https://75.img.avito.st/image/1/1.VpyAvLax-nW2C3h4oLEIz2kf-nE8HfB3.kt2OAD6vju7t1M6eamqK5mh-9lGufsGyrtWkWDagKJ4',
+    titleImg: 'https://75.img.avito.st/image/1/1.VpyAvLax-nW2C3h4oLEIz2kf-nE8HfB3.kt2OAD6vju7t1M6eamqK5mh-9lGufsGyrtWkWDagKJ4',
     titleCard: 'Светильник для бани и сауны IP65',
     btnBuy: 'Заказать',
     informationProduct:
@@ -16,8 +15,7 @@ export const products: IProduct[] = [
     id: 2,
     price: 350,
     count: 0,
-    titleImg:
-      'https://svet-vitebsk.by/wp-content/uploads/2022/01/krug-belyj-1.jpg',
+    titleImg: 'https://svet-vitebsk.by/wp-content/uploads/2022/01/krug-belyj-1.jpg',
     titleCard: 'СВЕТИЛЬНИК НБП 03-60(100)-001 УХЛ1',
     btnBuy: 'Заказать',
     informationProduct:
