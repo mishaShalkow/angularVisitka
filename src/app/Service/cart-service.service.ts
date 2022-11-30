@@ -1,27 +1,39 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
 import { IProduct } from '../models/cardProduct';
-import { products as date } from '../data/cardObj';
-import { CardProductComponent } from '../card-product/card-product.component';
-import { count, identity } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartServiceService {
   items: IProduct[] = [];
+  item = new Map()
 
-
-  getCountShops(products: IProduct) {
-    if (products.id === products.id) {
-      products.count++;
-    }
-  }
+  @Output() event = new EventEmitter()
 
   addToCard(products: IProduct) {
+    this.items.push(products)
+   /*  this.items.set(products, 1) */
+
+    console.log(this.items)
+   /*  this.getTotalArr(products) */
+ 
+   
+  }
+
+
+
+/*   getTotalArr(products: IProduct) {
+    for(let i of this.items)
+    if(i.id == products.id) {
+      products.count++
+      this.items.splice(i.id, 1);
+    }
+  } */
+/*   addToCard(products: IProduct) {
     this.items.push(products);
     this.getCountShops(products);
  
-  }
+  } */
 
   getItems() {
     return this.items;
@@ -32,5 +44,8 @@ export class CartServiceService {
     return this.items
   }
 
-  constructor() {}
+  constructor() {
+
+  }
+
 }
