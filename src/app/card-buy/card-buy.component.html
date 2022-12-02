@@ -1,21 +1,16 @@
 <div class="backFon">
     <div class="card cardByuMedia text-center modalView">
-        <div class="card-header">
+        <div class="card-header" >
             <ul class="nav nav-pills card-header-pills">
                 <li class="nav-item">
-                    <a class="nav-link informTitle active" (click)="close.emit()">Вернуться к выбору товара</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link completeFormByu" href="#"
-            >Очистить корзину</a
-          >
-        </li>
-      </ul>
-      <div class="container">
-        <h2>Группа компаний свет</h2>
-        <br />
-        <div class="table-responsive">
+                  <a class="nav-link informTitle active" (click)="close.emit()">Вернуться к выбору товара</a>
+                </li>
+                <button (click)="removeFromCard(product)" class="nav-link completeFormByu" >Очистить корзину</button>
+            </ul>
+          <div class="container">
+            <h2>Группа компаний свет</h2>
+          <br/>
+          <div class="table-responsive">
           <table class="table table-hover table-bordered">
             <thead>
               <tr>
@@ -26,33 +21,29 @@
                 <th>Сумма</th>
               </tr>
             </thead>
-            <thead id="cart" *ngFor="let item of items">
+            <thead id="cart" *ngFor="let product of productCarts; let i  = index">
               <tr>
-                <th>{{ item.id }}</th>
-                <th>{{ item.titleCard }}</th>
-                <th>{{ item.price }}</th>
+                <th>{{ i + 1}}</th>
+                <th>{{ product.titleCard }}</th>
+                <th>{{ product.price }}</th>
                 <th>
-                  <button  class="btn btn-minus">
-                    -</button
-                  >{{ item.count
-                  }}<button class="btn btn-plus">
-                    +
-                  </button>
+                  <input 
+                  [(ngModel)]="product.count" 
+                  [ngModelOptions]="{standalone: true}" min="1" type="number" value="1"
+                  name="" class="form-control text-center w-30" />
                 </th>
-                <th>{{ 0 }}</th>
+                <th>{{ product.count * product?.price | number }} руб.</th>
               </tr>
             </thead>
           </table>
         </div>
         <div>
           Итого:
-          <span id="total-cart-summa">{{ 0 }}</span>
+          <span id="total-cart-summa">{{ total }}</span>
           руб.
         </div>
         <br />
-        <button id="order" class="btn btn-info" (click)="formsBuy = true">
-          Оформить заказ
-        </button>
+        <button id="order" class="btn btn-info" (click)="formsBuy = true"> Оформить заказ </button>
       </div>
     </div>
   </div>
