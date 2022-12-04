@@ -1,7 +1,3 @@
 <app-navigation></app-navigation>
-
-<input type="text" class="form-control" placeholder="Поиск по названию" [(ngModel)]="term" />
-<div class="cardLine1">
-    <app-card-product *ngFor="let product of products | filterShops: term" [product]="product">
-    </app-card-product>
-</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+<app-card-product ></app-card-product>
+        

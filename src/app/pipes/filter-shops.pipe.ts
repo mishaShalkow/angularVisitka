@@ -5,8 +5,8 @@ import { IProduct } from '../models/cardProduct';
   name: 'filterShops',
 })
 export class FilterShopsPipe implements PipeTransform {
-  transform(products: IProduct[], search: string): IProduct[] {
-    return products.filter((p) =>
+  transform(product: IProduct[], search: string): IProduct[] {
+    return product.filter((p) =>
       p.titleCard.toLowerCase().includes(search.toLowerCase())
     );
   }

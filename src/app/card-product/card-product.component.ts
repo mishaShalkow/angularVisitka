@@ -1,8 +1,7 @@
 import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { IProduct } from '../models/cardProduct';
+import { Router } from '@angular/router';
 import { CartServiceService } from '../Service/cart-service.service';
-import { products as date } from '../data/cardObj';
-import { products } from '../data/cardObj';
 
 @Component({
   selector: 'app-card-product',
@@ -11,16 +10,46 @@ import { products } from '../data/cardObj';
 })
 export class CardProductComponent implements OnInit {
   informAbout = false;
-  @Input () product: IProduct;
+
+/*   @Input () product: IProduct; */
   @Output() close = new EventEmitter<void>();
 
-  addToCart(product: IProduct) {
-    window.alert('Вы добавили товар в корзину');
-    this.cartService.addToCard(product);
+  productList!: any[]
+  products: any[] = []
+  subTotal!: any
+  term = ''
+
+  constructor(
+    private _cartService: CartServiceService,
+    private route: Router
+    ) {}
+
+  ngOnInit() {
+   this._cartService.getAllProduct().subscribe({
+    next: (res: any) => {
+      this.productList = res;
+      console.log(res)
+    },
+    error: (error) => {
+      console.log('error', error);
+    },
+    complete: () => {
+      console.log('Request complete')
+    }
+   })
+    this._cartService.loadCart()
+    this.products = this._cartService.getProduct()
   }
 
+  addToCart(product: IProduct) {
+    window.alert('Вы добавили товар в корзину')
+    if(!this._cartService.productCart(product)) {
+      product.count = 1;
+      this._cartService.addToCart(product);
+      this.products = [...this._cartService.getProduct()]
+      this.subTotal = product.price
+      console.log(product)
+    }
+  }
 
-  constructor(private cartService: CartServiceService) {}
-
-  ngOnInit(): void {}
-}
+ } 

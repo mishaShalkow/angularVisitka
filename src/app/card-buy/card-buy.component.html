@@ -5,7 +5,7 @@
                 <li class="nav-item">
                   <a class="nav-link informTitle active" (click)="close.emit()">Вернуться к выбору товара</a>
                 </li>
-                <button (click)="removeFromCard(product)" class="nav-link completeFormByu" >Очистить корзину</button>
+                <button (click)="clearCard()" class="nav-link completeFormByu" >Очистить корзину</button>
             </ul>
           <div class="container">
             <h2>Группа компаний свет</h2>
@@ -19,6 +19,7 @@
                 <th>Цена</th>
                 <th>Количество</th>
                 <th>Сумма</th>
+                <th></th>
               </tr>
             </thead>
             <thead id="cart" *ngFor="let product of productCarts; let i  = index">
@@ -33,6 +34,7 @@
                   name="" class="form-control text-center w-30" />
                 </th>
                 <th>{{ product.count * product?.price | number }} руб.</th>
+                <button (click)="removeFromCard(product)" type="button" class="btn mt-3">x</button>
               </tr>
             </thead>
           </table>

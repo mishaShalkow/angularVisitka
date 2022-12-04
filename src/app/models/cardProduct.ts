@@ -4,6 +4,5 @@ export interface IProduct {
   count: number;
   titleImg: string;
   titleCard: string;
-  btnBuy: string;
   informationProduct: string;
 }

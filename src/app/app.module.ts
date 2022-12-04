@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -34,11 +36,12 @@ import { FilterShopsPipe } from './pipes/filter-shops.pipe';
     AppRoutingModule, 
     ReactiveFormsModule,
     FormsModule, 
-    RouterModule.forRoot([
+    HttpClientModule,
+/*     RouterModule.forRoot([
     { path: '', component: CardProductComponent },
     { path: 'products/:productId', component: InformationAboutShopsComponent },
     { path: 'card-buy', component: CardBuyComponent}
-  ])],
+  ]) */],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
