@@ -10,39 +10,33 @@ import {products as date} from '../data/cardObj'
 })
 export class CardBuyComponent implements OnInit {
   productList!: any[]
-  products: IProduct[] = []
+  productsSum: IProduct[] = []
   subTotal!: any
   productCarts: IProduct[]
 
   formsBuy = false
-  title = 'Информация для заказа'
   @Output() close = new EventEmitter<void>()
 
   constructor(private _cartService: CartServiceService) {
     this.productCarts = this._cartService.getProduct()
   }
 
-  saveCart(): void {
-    localStorage.setItem('cart_item', JSON.stringify(this.products))
-  }
-
   clearCard() {
-    this.products = []
+    this.productsSum = []
     this.productCarts = []
-    this.saveCart()
   }
 
   ngOnInit(): void {
-    this.products = this._cartService.getProduct()
+    this.productsSum = this._cartService.getProduct()
   }
 
   removeFromCard(product: any) {
     this._cartService.removeCard(product)
-    this.products = this._cartService.getProduct()
+    this.productsSum = this._cartService.getProduct()
   }
 
   get total() {
-    return this.products?.reduce(
+    return this.productsSum?.reduce(
       (sum, product) => ({
         count: 1,
         price: sum.price + product.count * product.price,

@@ -1,10 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { IProduct } from '../models/cardProduct';
-import { ActivatedRoute } from '@angular/router';
-import { products } from '../data/cardObj';
-import { products as date } from '../data/cardObj';
-import { CartServiceService } from '../Service/cart-service.service';
-
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core'
+import {CartServiceService} from '../Service/cart-service.service'
+import {IProduct} from '../models/cardProduct'
 
 @Component({
   selector: 'app-information-about-shops',
@@ -12,17 +8,22 @@ import { CartServiceService } from '../Service/cart-service.service';
   styleUrls: ['./information-about-shops.component.scss'],
 })
 export class InformationAboutShopsComponent implements OnInit {
-  informAbout = false;
-  formsBuy = false;
-  @Output() close = new EventEmitter<void>();
-  @Input() product: IProduct;
-  constructor(
-    private route: ActivatedRoute,
-  ) {}
+  @Input() productList!: IProduct[]
+  @Input() informationProduct: string
+
+  formsBuy = false
+
+  /*   informCarts = products */
+  @Output() close = new EventEmitter<void>()
+
+  constructor(private _cartService: CartServiceService) {}
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      this.product = products[+params.get('productId')]
-    })
-    
-  }}
+    /*     this._cartService.getAllProduct().subscribe({
+      next: (res: any) => {
+        this.productList = res
+        console.log(res)
+      },
+    }) */
+  }
+}
