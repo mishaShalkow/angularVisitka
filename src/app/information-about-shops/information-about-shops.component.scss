@@ -1,119 +1,119 @@
 .backFon {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 
 .active {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .informTitle {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .completeFormByu {
-    margin-left: 510px;
+  margin-left: 510px;
 }
 
 .modalView {
-    width: 50%;
-    padding: 1rem;
-    background: white;
-    margin-top: 3rem;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
+  width: 50%;
+  padding: 1rem;
+  background: white;
+  margin-top: 3rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 @media (min-width: 575px) and (max-width: 585px) {
-    .cardByuMedia {
-        margin-left: -40px;
-        width: 300px;
-    }
-    .informTitle {
-        margin-left: 20px;
-    }
-    .completeFormByu {
-        margin-left: 45px;
-    }
+  .cardByuMedia {
+    margin-left: -40px;
+    width: 300px;
+  }
+  .informTitle {
+    margin-left: 20px;
+  }
+  .completeFormByu {
+    margin-left: 45px;
+  }
 }
 
 @media (min-width: 1440px) and (max-width: 1450px) {
-    .completeFormByu {
-        margin-left: 280px;
-    }
+  .completeFormByu {
+    margin-left: 280px;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1034px) {
-    .completeFormByu {
-        margin: 0;
-    }
+  .completeFormByu {
+    margin: 0;
+  }
 }
 
 @media (min-width: 2560px) and (max-width: 2570px) {
-    .nav-link {
-        font-size: 30px;
-    }
-    .card-title {
-        font-size: 35px;
-    }
-    .card-text {
-        font-size: 40px;
-    }
-    .btn-primary {
-        font-size: 35px;
-    }
-    .completeFormByu {
-        margin-left: 577px;
-    }
+  .nav-link {
+    font-size: 30px;
+  }
+  .card-title {
+    font-size: 35px;
+  }
+  .card-text {
+    font-size: 40px;
+  }
+  .btn-primary {
+    font-size: 35px;
+  }
+  .completeFormByu {
+    margin-left: 577px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 778px) {
-    .completeFormByu {
-        margin-left: 80px;
-    }
-    .informTitle {
-        margin-left: 60px;
-    }
+  .completeFormByu {
+    margin-left: 80px;
+  }
+  .informTitle {
+    margin-left: 60px;
+  }
 }
 
 @media (min-width: 425px) and (max-width: 435px) {
-    .card {
-        width: 300px;
-    }
-    .completeFormByu {
-        margin-left: 45px;
-    }
-    .informTitle {
-        margin-left: 20px;
-    }
+  .card {
+    width: 300px;
+  }
+  .completeFormByu {
+    margin-left: 45px;
+  }
+  .informTitle {
+    margin-left: 20px;
+  }
 }
 
 @media (min-width: 375px) and (max-width: 385px) {
-    .card {
-        width: 300px;
-    }
-    .informTitle {
-        margin-left: 20px;
-    }
-    .completeFormByu {
-        margin-left: 45px;
-    }
+  .card {
+    width: 300px;
+  }
+  .informTitle {
+    margin-left: 20px;
+  }
+  .completeFormByu {
+    margin-left: 45px;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 330px) {
-    .card {
-        width: 300px;
-    }
-    .informTitle {
-        margin-left: 20px;
-    }
-    .completeFormByu {
-        margin-left: 43px;
-    }
+  .card {
+    width: 300px;
+  }
+  .informTitle {
+    margin-left: 20px;
+  }
+  .completeFormByu {
+    margin-left: 43px;
+  }
 }

@@ -1,7 +1,4 @@
-export interface CartShopsInterface{
-    articl: number;
-    nameProduct: string;
-    priceProduct: number;
-    countProduct: number;
-    totalSumProducts: number;
+export interface CartShopsInterface {
+  titleCard: string
+  informationProduct: string
 }

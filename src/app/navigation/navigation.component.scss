@@ -1,22 +1,21 @@
 .navbar-logo {
-    width: 80px;
+  width: 80px;
 }
 
 @media (min-width: 2560px) and (max-width: 2560px) {
-    .navbar {
-        height: 150px;
-        margin-left: 35px;
-        font-size: 35px;
-        margin: 0;
-    }
-    .nav-item {
-        margin-left: 50px;
-    }
-    .navbar-logo {
-        width: 150px;
-    }
+  .navbar {
+    height: 150px;
+    margin-left: 35px;
+    font-size: 35px;
+    margin: 0;
+  }
+  .nav-item {
+    margin-left: 50px;
+  }
+  .navbar-logo {
+    width: 150px;
+  }
 }
-
 
 /* @media (min-width: 425px) {
     .container {

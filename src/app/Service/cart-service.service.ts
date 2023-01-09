@@ -1,34 +1,21 @@
-import { EventEmitter, Injectable, Output } from '@angular/core';
-import { IProduct } from '../models/cardProduct';
-import { products as date } from '../data/cardObj';
-import { HttpClient } from '@angular/common/http';
+import {EventEmitter, Injectable, Output} from '@angular/core'
+import {IProduct} from '../models/cardProduct'
+import {products as date} from '../data/cardObj'
+import {HttpClient} from '@angular/common/http'
+import {Observable, tap} from 'rxjs'
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartServiceService {
-  items: IProduct[];
-  item = new Map()
-  /*   addToCard(products: IProduct) {
-      this.items.push(products)
-      console.log(this.items)
-     
-    } */
-/*     getItems() {
-      return this.items;
-    }
- */
-/*   clearCart() {
-    this.items = []
-    return this.items
-  } */
-  
   products: IProduct[] = []
 
   constructor(private http: HttpClient) {}
 
-  getAllProduct() {
-    return this.http.get('assets/cardsProduct.json');
+  getAllProduct(): Observable<IProduct[]> {
+    return this.http
+      .get<IProduct[]>('assets/cardsProduct.json')
+      .pipe(tap((products) => (this.products = products)))
   }
 
   getProduct() {
@@ -45,7 +32,7 @@ export class CartServiceService {
   }
 
   loadCart(): any {
-   this.products = JSON.parse(localStorage.getItem('cart_item') as any) || []
+    this.products = JSON.parse(localStorage.getItem('cart_item') as any) || []
   }
 
   productCart(product: any): boolean {
@@ -61,9 +48,9 @@ export class CartServiceService {
   }
 
   clearCard() {
-    localStorage.clear() 
+    this.products = []
+    localStorage.clear()
   }
 
   @Output() event = new EventEmitter()
-
 }

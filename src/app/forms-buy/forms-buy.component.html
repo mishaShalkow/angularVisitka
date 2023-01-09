@@ -1,11 +1,19 @@
-<form #myForm="ngForm" class="ng-pristine ng-untouched ng-valid" novalidate="" action="../user.service.ts" method="post" (ngSubmit)="onSubmit(myForm)">
-    <div class="backFon">
-        <div class="input-group mediaStyle formsBuy">
-            <!--       <span class="input-group-text">First and last name</span>
+<form
+  #myForm="ngForm"
+  class="ng-pristine ng-untouched ng-valid"
+  novalidate=""
+  action="../user.service.ts"
+  method="post"
+  (ngSubmit)="onSubmit(myForm)"
+>
+  <div class="backFon">
+    <div class="input-group mediaStyle formsBuy">
+      <!--       <span class="input-group-text">First and last name</span>
         <input type="text" aria-label="First name" class="form-control" />
         <input type="text" aria-label="Last name" class="form-control" /> -->
-            <div class="input-group input-group-sm mb-3">
-                <label class="input-group-text" id="inputGroup-sizing-sm">Введите имя и фамилию</label
+      <div class="input-group input-group-sm mb-3">
+        <label class="input-group-text" id="inputGroup-sizing-sm"
+          >Введите имя и фамилию</label
         >
         <input
           type="text"

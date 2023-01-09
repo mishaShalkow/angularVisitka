@@ -1,11 +1,12 @@
-import { IProduct } from '../models/cardProduct';
+import {IProduct} from '../models/cardProduct'
 
 export const products: IProduct[] = [
   {
     id: 1,
     price: 250,
     count: 0,
-    titleImg: 'https://75.img.avito.st/image/1/1.VpyAvLax-nW2C3h4oLEIz2kf-nE8HfB3.kt2OAD6vju7t1M6eamqK5mh-9lGufsGyrtWkWDagKJ4',
+    titleImg:
+      'https://75.img.avito.st/image/1/1.VpyAvLax-nW2C3h4oLEIz2kf-nE8HfB3.kt2OAD6vju7t1M6eamqK5mh-9lGufsGyrtWkWDagKJ4',
     titleCard: 'Светильник для бани и сауны IP65',
     informationProduct:
       'Степень защиты IP65, Мощность: 60 Вт, Источник света Патрон Е27, Предназначены для для освещения жилых, подсобных, производственных и др. помещений с повышенной влажностью и температурой (бани, сауны, бассейны и т.д.)',
@@ -14,7 +15,8 @@ export const products: IProduct[] = [
     id: 2,
     price: 350,
     count: 0,
-    titleImg: 'https://svet-vitebsk.by/wp-content/uploads/2022/01/krug-belyj-1.jpg',
+    titleImg:
+      'https://svet-vitebsk.by/wp-content/uploads/2022/01/krug-belyj-1.jpg',
     titleCard: 'СВЕТИЛЬНИК НБП 03-60(100)-001 УХЛ1',
     informationProduct:
       'Степень защиты IP54, Мощность: 60 Вт (100Вт), Источник света Патрон Е27, Предназначены для для освещения жилых, подсобных, производственных и др. помещений с повышенной влажностью и температурой (бани, сауны, бассейны и т.д.)',
@@ -200,4 +202,4 @@ export const products: IProduct[] = [
     informationProduct:
       'Удлинитель на катушке с 4-мя розетками с/з IP44 УХ-16-4-хх-К: Степень защиты: IP44. Максимальный ток присоединяемых к удлинителю устройств: 16А. Количество и вид розеток в удлинителе: 4 с заземлением. Может использоваться в условиях складских и производственных помещений, на садово-дачных участках и дома при выполнении различных видов работ с использованием электроприборов, установок и т.п.',
   },
-];
+]

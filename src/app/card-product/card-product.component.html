@@ -5,16 +5,35 @@
         <div class="card ">
                 <img [src]="product.titleImg" class="card-img-top" alt="Картинка светильника" />
                 <div class="card-body" >
-                    <h5 class="card-title" >{{ product.titleCard }}</h5>
+                  <h5 class="card-title" >{{ product.titleCard }}</h5>
+                  <button data-bs-toggle="modal" data-bs-target="#modal" class="btn btnStyleLights btn-primary"> Подробней </button>
+          
+<!--  модальное окно  -->
 
-                    <button (click)="informAbout = true" class="btn btnStyleLights btn-primary"> Подробней </button>
+                <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">{{product.titleCard}}</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                        <div class="modal-body">
+                          <img class="img-fluid" [src]="product.titleImg" alt="Картинка изображения">
+                          <p>{{product.informationProduct}}</p>
+                        </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Добавить в корзину</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Вернуться к выбору товара</button>
+                          </div>
+                    </div>
+                  </div>
+                </div>
 
-                    <button (click)="addToCart(product)" class="btn btnMediaW575 btnStyleLights btn-secondary">
-                        Заказать
-                    </button>
+<!-- конец модального окна -->
+
+                  <button (click)="addToCart(product)" class="btn btnMediaW575 btnStyleLights btn-secondary">Заказать</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<app-information-about-shops *ngIf="informAbout" (close)="informAbout = false" ></app-information-about-shops>
