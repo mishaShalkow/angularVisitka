@@ -9,8 +9,9 @@ import {NgForm} from '@angular/forms'
 export class FormsBuyComponent implements OnInit {
   firstName: string = ''
   positionName: string = ''
-  amountPosition: string = ''
-  phoneCustomer: string = ''
+  positionDelivery: string = ''
+  numberDelivery: string = ''
+  wayDelivery: string = ''
   submit(form: NgForm) {
     console.log(form)
   }
@@ -20,7 +21,6 @@ export class FormsBuyComponent implements OnInit {
   }
 
   buyOrderPosition = 'Оформить заказ'
-  @Input() title = 'Заполните заявку'
   @Output() close = new EventEmitter<void>()
   constructor() {}
 

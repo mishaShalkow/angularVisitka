@@ -14,6 +14,12 @@ import {WindowContactComponent} from './window-contact/window-contact.component'
 import {CardProductComponent} from './card-product/card-product.component'
 import {InformationAboutShopsComponent} from './information-about-shops/information-about-shops.component'
 import {FilterShopsPipe} from './pipes/filter-shops.pipe'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import {MatDialogModule} from '@angular/material/dialog'
+import {DialogBoxComponent} from './dialog-box/dialog-box.component'
+import {MatInputModule} from '@angular/material/input';
+import { PersonalBoxComponent } from './personal-box/personal-box.component';
+import { ChekingBoxComponent } from './cheking-box/cheking-box.component'
 
 @NgModule({
   declarations: [
@@ -26,6 +32,9 @@ import {FilterShopsPipe} from './pipes/filter-shops.pipe'
     CardProductComponent,
     InformationAboutShopsComponent,
     FilterShopsPipe,
+    DialogBoxComponent,
+    PersonalBoxComponent,
+    ChekingBoxComponent,
   ],
   entryComponents: [CardBuyComponent, FormsBuyComponent],
   imports: [
@@ -34,11 +43,11 @@ import {FilterShopsPipe} from './pipes/filter-shops.pipe'
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    /*     RouterModule.forRoot([
-    { path: '', component: CardProductComponent },
-    { path: 'products/:productId', component: InformationAboutShopsComponent },
-    { path: 'card-buy', component: CardBuyComponent}
-  ]) */
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   bootstrap: [AppComponent],
 })

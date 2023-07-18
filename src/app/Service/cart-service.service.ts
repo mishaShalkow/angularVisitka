@@ -1,56 +1,78 @@
-import {EventEmitter, Injectable, Output} from '@angular/core'
-import {IProduct} from '../models/cardProduct'
-import {products as date} from '../data/cardObj'
+import {Injectable} from '@angular/core'
+import {IProduct, OfferProduct} from '../models/cardProduct'
 import {HttpClient} from '@angular/common/http'
-import {Observable, tap} from 'rxjs'
+import {catchError, tap} from 'rxjs'
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartServiceService {
-  products: IProduct[] = []
-
+  items: IProduct[]
+  anotherUrl = 'https://tommy-c0e50-default-rtdb.firebaseio.com/products.json'
+  anotherUrlBasket =
+    'https://firebasestorage.googleapis.com/v0/b/tommy-c0e50.appspot.com/o/cardsProduct.json?alt=media&token=84e78e0a-7bc1-4ccc-b8df-fd9d548d6b64'
+  url = 'http://localhost:3000/products'
+  urlBasket = 'http://localhost:3000/basket'
+  urlOffer = 'http://localhost:3000/newOfferProducts'
+  basketOffer = 'http://localhost:3000/basketOffer'
+  deleteAllItems = 'http://localhost:4200/basket'
   constructor(private http: HttpClient) {}
 
-  getAllProduct(): Observable<IProduct[]> {
-    return this.http
-      .get<IProduct[]>('assets/cardsProduct.json')
-      .pipe(tap((products) => (this.products = products)))
-  }
-
-  getProduct() {
-    return this.products
-  }
-
-  saveCart(): void {
-    localStorage.setItem('cart_item', JSON.stringify(this.products))
-  }
-
-  addToCart(addProduct: any) {
-    this.products.push(addProduct)
-    this.saveCart()
-  }
-
-  loadCart(): any {
-    this.products = JSON.parse(localStorage.getItem('cart_item') as any) || []
-  }
-
-  productCart(product: any): boolean {
-    return this.products.findIndex((x: any) => x.id === product.id) > 1
-  }
-
-  removeCard(product: any) {
-    const index = this.products.findIndex((x: any) => x.id === product.id)
-    if (index > -1) {
-      this.products.splice(index, 1)
-      this.saveCart()
-    }
-  }
-
   clearCard() {
-    this.products = []
-    localStorage.clear()
+    this.items = []
   }
 
-  @Output() event = new EventEmitter()
+  getItem() {
+    return this.items
+  }
+
+  getAllProduct() {
+    return this.http.get<IProduct[]>(this.url)
+  }
+
+  getProduct(id: number) {
+    return this.http.get<IProduct>(`${this.url}/${id}`)
+  }
+
+  postProducts(product: IProduct) {
+    return this.http.post<IProduct>(this.url, product)
+  }
+
+  postToBasket(product: IProduct) {
+    return this.http.post<IProduct>(this.urlBasket, product)
+  }
+
+  /* --proxy-config proxy.config.json */
+
+  getProductFromBasket() {
+    return this.http.get<IProduct[]>(this.urlBasket)
+  }
+
+  updateFromBasket(product: IProduct) {
+    return this.http.put<IProduct>(`${this.urlBasket}/${product.id}`, product)
+  }
+
+  deleteItemFromBasket(id: number) {
+    return this.http.delete<any>(`${this.urlBasket}/${id}`)
+  }
+
+  deleteAllProductsFromBasket() {
+    return this.http.delete<IProduct>(this.deleteAllItems)
+  }
+
+  postOfferProducts(product: IProduct) {
+    return this.http.post<any>(this.urlOffer, product)
+  }
+
+  postOfferProductsFromBaskeet(product: IProduct) {
+    return this.http.post<any>(this.basketOffer, product)
+  }
+
+  getProductFromPersonalBox() {
+    return this.http.get<IProduct[]>(this.urlOffer)
+  }
+
+  getProductFromPersonalBoxFromBasket() {
+    return this.http.get<IProduct[]>(this.basketOffer)
+  }
 }

@@ -1,0 +1,98 @@
+<!-- <div class="row row-cols-1 m-0 row-cols-md-2 g-4" *ngFor="let item of newOfferProducts">
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{item.firstSecondName}}</h5>
+          <p class="card-text">{{item.awayDelivery}}</p>
+          <p class="card-text">{{item.numberCustomer}}</p>
+        </div>
+      </div>
+    </div>
+</div> -->
+<!-- 
+
+<div class="row row-cols-1 m-0 row-cols-md-2 g-4" *ngFor="let item of basket">
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{item.titleCard}}</h5>
+          <p class="card-text">{{item.informationProduct}}</p>
+          <p class="card-text">{{item.total}}</p>
+        </div>
+      </div>
+    </div>
+</div> -->
+
+<div class="card cardByuMedia text-center modalView">
+
+  <div class="card-header" >
+    <ul class="nav nav-pills card-header-pills">
+    </ul>
+    <div class="container">
+      <h2>Заказ покупателя</h2>
+      <br />
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered" >
+          <thead>
+            <tr>
+              <!-- <th>Артикул</th> -->
+              <th>Название</th>
+              <th>Цена</th>
+              <th>Количество</th>
+              <th>Сумма</th>
+            </tr>
+          </thead>
+          <thead id="cart" *ngFor="let item of newOfferProductsFromBaket">
+            <tr>
+              <!-- <th>{{art + 1}}</th> -->
+              <th>{{ item.titleCard }}</th>
+              <th>{{ item.price }}</th>
+              <th>{{item.count}}</th>
+              <th>{{ item.count * item?.price | number }} руб.</th>
+            </tr>
+          </thead>
+          <br>
+            <h4>Детали заказа</h4>
+          <br>
+          <thead>
+            <tr>
+              <th>Полное имя</th>
+              <th>Адрес доставки</th>
+              <th>Номер покупателя</th>
+            </tr>
+          </thead>
+          <thead id="cart" *ngFor="let itemOffer of newOfferProducts">
+            <tr>
+              <th>{{itemOffer.fullName}}</th>
+              <th>{{itemOffer.awayDelivery}}</th>
+              <th>{{itemOffer.numberCustomer}}</th>
+            </tr>
+          </thead>
+        </table>
+        <div>
+          Итого:
+          <span id="total-cart-summa">{{total }}</span>
+          руб.
+        </div>
+    <!--   <br>
+        <h4>Детали заказа</h4>
+      <br>
+        <table class="table table-hover table-bordered">
+          <thead>
+            <tr>
+              <th>Полное имя</th>
+              <th>Адрес доставки</th>
+              <th>Номер покупателя</th>
+            </tr>
+          </thead>
+          <thead id="cart" *ngFor="let itemOffer of newOfferProducts">
+            <tr>
+              <th>{{itemOffer.fullName}}</th>
+              <th>{{itemOffer.awayDelivery}}</th>
+              <th>{{itemOffer.numberCustomer}}</th>
+            </tr>
+          </thead>
+        </table> -->
+      </div>
+    </div>
+  </div>

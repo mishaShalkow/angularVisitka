@@ -1,0 +1,19 @@
+<form class="example-form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="example-full-width">
+      <mat-label>fullName</mat-label>
+      <input matInput placeholder="Иван ИВанов" formControlName="fullName">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>awayDiveler</mat-label>
+        <input matInput placeholder="г. МОсква, чератново 40" formControlName="awayDelivery">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>numberCustomer</mat-label>
+        <input matInput placeholder="+79997777777" formControlName="numberCustomer">
+      </mat-form-field>
+
+    <button class="btn btnStyleLights btn-primary btnOferStyle" type="submit" (click)="onSubmit()"> Заказать </button>
+    <button class="btn btnStyleLights btn-primary" type="button" (click)="onNoClick()"> Отменить </button>
+  </form>

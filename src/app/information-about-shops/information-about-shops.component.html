@@ -1,54 +1,15 @@
-<!-- <div class="backFon">
-  <div class="card cardByuMedia text-center modalView">
-    <div class="card-body" *ngFor="let productList of productList">
-      <h5 class="card-title">{{ productList.titleCard }}</h5>
-      <p class="card-text">{{ productList.informationProduct }}</p>
-    </div>
-    <div class="card-header">
-      <ul class="nav nav-pills card-header-pills">
-        <li class="nav-item">
-          <a class="nav-link informTitle active" (click)="close.emit()">Главная страница</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link completeFormByu">В корзину</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div> -->
-
-<!-- <div class="container py-3 text-center">
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
-    Открыть модальное окно
-  </button>
-</div> -->
-<!-- <div class="backFon">
-
-  <div class="modal fade " id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Информация</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img class="img-fluid" src="/examples/images/admin-dashboard.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt vero illo error eveniet cum.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Да, хочу</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Нет, спасибо</button>
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="product.titleImg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{product.titleCard}}</h5>
+          <p class="card-text">{{product.informationProduct}}</p>
+          <p class="card-text"><small class="text-muted">Последнее обновление 25.05.2022</small></p>
         </div>
       </div>
     </div>
   </div>
   
-</div>
-
-
-
-<app-forms-buy
-  *ngIf="formsBuy"
-  title="Заполните заявку"
-  (close)="formsBuy = false">
-</app-forms-buy> -->

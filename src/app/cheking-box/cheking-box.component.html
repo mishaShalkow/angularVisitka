@@ -1,0 +1,15 @@
+<form class="example-form" [formGroup]="myForm">
+<!--     <mat-form-field class="example-full-width">
+      <mat-label>Логин</mat-label>
+      <input matInput placeholder="Иван ИВанов" formControlName="login">
+    </mat-form-field> -->
+    <span>введите пароль администратора</span>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Пароль</mat-label>
+        <input matInput placeholder="12112121212" formControlName="password">
+    </mat-form-field>
+
+    <button class="btn btnStyleLights btn-primary btnOferStyle" type="submit" (click)="onSubmit()"> Войти </button>
+    <button class="btn btnStyleLights btn-primary" type="button" [routerLink]="['']" (click)="onNoClick()"> Отменить </button>
+  </form>

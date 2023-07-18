@@ -22,3 +22,18 @@
         width: 0%;
     }
 } */
+
+
+.ownerClass {
+  margin-right: 200px;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+.active:disabled {
+  pointer-events: none; /* делаем элемент неактивным для взаимодействия */
+  cursor: default; /*  курсор в виде стрелки */
+  color: #888;/* цвет текста серый */
+  }

@@ -1,5 +1,6 @@
 import {Pipe, PipeTransform} from '@angular/core'
 import {IProduct} from '../models/cardProduct'
+import {filter} from 'rxjs'
 
 @Pipe({
   name: 'filterShops',

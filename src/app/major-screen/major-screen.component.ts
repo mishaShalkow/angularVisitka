@@ -21,23 +21,5 @@ export class MajorScreenComponent implements OnInit {
     })
   }
 
-  ngOnInit() {
-    this.loading = true
-    this._cartService.getAllProduct().subscribe({
-      next: (res: any) => {
-        this.productList = res
-        console.log(res)
-        this.loading = false
-      },
-      error: (error) => {
-        console.log('error', error)
-      },
-      complete: () => {
-        console.log('Request complete')
-      },
-    })
-
-    this._cartService.loadCart()
-    this.products = this._cartService.getProduct()
-  }
+  ngOnInit() {}
 }
