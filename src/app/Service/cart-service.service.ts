@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core'
 import {IProduct, OfferProduct} from '../models/cardProduct'
-import {HttpClient} from '@angular/common/http'
+import {HttpClient, HttpHeaders} from '@angular/common/http'
 import {catchError, tap} from 'rxjs'
 
 @Injectable({
@@ -15,11 +15,22 @@ export class CartServiceService {
   urlBasket = 'http://localhost:3000/basket'
   urlOffer = 'http://localhost:3000/newOfferProducts'
   basketOffer = 'http://localhost:3000/basketOffer'
-  deleteAllItems = 'http://localhost:4200/basket'
-  constructor(private http: HttpClient) {}
+  deleteAllItems = 'http://localhost:3000/basket'
+  constructor(private http: HttpClient) {
+    const saveCart = JSON.parse(localStorage.getItem('deleteAllItems'))
+    if (saveCart) {
+      this.deleteAllItems = saveCart
+    }
+  }
+
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+    }),
+  }
 
   clearCard() {
-    this.items = []
+    localStorage.setItem('deleteAllItems', JSON.stringify(this.deleteAllItems))
   }
 
   getItem() {
@@ -60,19 +71,19 @@ export class CartServiceService {
     return this.http.delete<IProduct>(this.deleteAllItems)
   }
 
-  postOfferProducts(product: IProduct) {
-    return this.http.post<any>(this.urlOffer, product)
-  }
-
-  postOfferProductsFromBaskeet(product: IProduct) {
+  postOfferProducts(product: IProduct[]) {
     return this.http.post<any>(this.basketOffer, product)
   }
 
+  postOfferProductsFromBaskeet(product: IProduct[]) {
+    return this.http.post<any>(this.urlOffer, product)
+  }
+
   getProductFromPersonalBox() {
-    return this.http.get<IProduct[]>(this.urlOffer)
+    return this.http.get<IProduct[]>(this.basketOffer)
   }
 
   getProductFromPersonalBoxFromBasket() {
-    return this.http.get<IProduct[]>(this.basketOffer)
+    return this.http.get<IProduct[]>(this.urlOffer)
   }
 }

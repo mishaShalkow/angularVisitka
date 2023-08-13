@@ -1,16 +1,16 @@
 <form class="example-form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
     <mat-form-field class="example-full-width">
-      <mat-label>fullName</mat-label>
-      <input matInput placeholder="Иван ИВанов" formControlName="fullName">
+      <mat-label>Full name</mat-label>
+      <input matInput placeholder="Иван Иванов" formControlName="fullName">
     </mat-form-field>
 
     <mat-form-field class="example-full-width">
-        <mat-label>awayDiveler</mat-label>
+        <mat-label>Delivery address</mat-label>
         <input matInput placeholder="г. МОсква, чератново 40" formControlName="awayDelivery">
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
-        <mat-label>numberCustomer</mat-label>
+        <mat-label>Client's number</mat-label>
         <input matInput placeholder="+79997777777" formControlName="numberCustomer">
       </mat-form-field>
 

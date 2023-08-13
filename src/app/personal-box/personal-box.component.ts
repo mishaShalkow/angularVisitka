@@ -19,25 +19,23 @@ export class PersonalBoxComponent implements OnInit {
   constructor(private _cartService: CartServiceService) {}
 
   ngOnInit(): void {
-    this.newOfferProductsSubscribe = this._cartService
-      .getProductFromPersonalBox()
+    this._cartService.getProductFromPersonalBox().subscribe((data) => {
+      this.newOfferProducts = data
+      console.log(data)
+    })
+
+    /*   this.newOfferProductsFromBaketSub = this._cartService
+      .getProductFromPersonalBoxFromBasket()
       .subscribe((data) => {
         this.newOfferProducts = data
         console.log(data)
       })
-
-    this.newOfferProductsFromBaketSub = this._cartService
-      .getProductFromPersonalBoxFromBasket()
-      .subscribe((data) => {
-        this.newOfferProductsFromBaket = data
-        console.log(data)
-      })
-
-    this.basketSubscribe = this._cartService
+ */
+    /* this.basketSubscribe = this._cartService
       .getProductFromBasket()
       .subscribe((data) => {
         this.basket = data
-      })
+      }) */
   }
 
   get total() {

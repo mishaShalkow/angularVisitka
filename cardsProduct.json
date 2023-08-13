@@ -148,39 +148,29 @@
       "titleImg": "https://svet-vitebsk.by/wp-content/uploads/2022/01/krug-belyj-reshetka.jpg",
       "titleCard": "СВЕТИЛЬНИК НБП 03-60(100)-002 УХЛ1",
       "informationProduct": "Степень защиты: IP54, Мощность: 60 Вт (100Вт), Источник света: Патрон Е27, Предназначены для для освещения жилых, подсобных, производственных и др. помещений с повышенной влажностью и температурой (бани, сауны, бассейны и т.д.)",
-      "count": 4
-    },
-    {
-      "id": "1",
-      "price": 250,
-      "titleImg": "https://75.img.avito.st/image/1/1.VpyAvLax-nW2C3h4oLEIz2kf-nE8HfB3.kt2OAD6vju7t1M6eamqK5mh-9lGufsGyrtWkWDagKJ4",
-      "titleCard": "Светильник для бани и сауны IP65",
-      "informationProduct": "Степень защиты IP65, Мощность: 60 Вт, Источник света Патрон Е27, Предназначены для для освещения жилых, подсобных, производственных и др. помещений с повышенной влажностью и температурой (бани, сауны, бассейны и т.д.)",
-      "count": 1
-    },
-    {
-      "id": "11",
-      "price": 250,
-      "titleImg": "https://svet-vitebsk.by/wp-content/uploads/2022/03/img_3093-kopija.png",
-      "titleCard": "СВЕТИЛЬНИК SPO-SVET-36-1200-6500",
-      "informationProduct": "Степень защиты: IP40. Мощность: 36 Вт. Цветовая температура: 6500К. Светильники предназначены для общего освещения административных и общественных помещений.",
-      "count": 1
-    },
-    {
-      "id": "7",
-      "price": 250,
-      "titleImg": "https://svet-vitebsk.by/wp-content/uploads/2022/01/dymchatyj-gladkij.jpg",
-      "titleCard": "СВЕТИЛЬНИК НТУ 01-ХХ-ХХ5, ДЫМЧАТЫЙ",
-      "informationProduct": "Степень защиты: IP44. Мощность: 60 (100,150) Вт. Источник света: Патрон Е27. Предназначены для освещения улиц, придомовых территорий, дорог, скверов, парков.",
       "count": 2
+    },
+    {
+      "id": "4",
+      "price": 250,
+      "titleImg": "https://svet-vitebsk.by/wp-content/uploads/2022/01/nbp_04_60_001_white.jpg",
+      "titleCard": "СВЕТИЛЬНИК НБП 04-60(100)-001 УХЛ1",
+      "informationProduct": "Степень защиты: IP54, Мощность: 60 Вт (100Вт), Источник света: Патрон Е27, Предназначены для для освещения жилых, подсобных, производственных и др. помещений с повышенной влажностью и температурой (бани, сауны, бассейны и т.д.)",
+      "count": 1
     }
   ],
   "newOfferProducts": [
     {
-      "fullName": "dddddd",
-      "awayDelivery": "ddddddddddd",
-      "numberCustomer": "33333333333333",
+      "fullName": "fgfgfgfg",
+      "awayDelivery": "gfgfgfg",
+      "numberCustomer": "44444444",
       "id": 1
+    },
+    {
+      "fullName": "kjkkj",
+      "awayDelivery": "jnjnjn",
+      "numberCustomer": "65456154",
+      "id": 2
     }
   ],
   "basketOffer": [
@@ -191,22 +181,14 @@
         "titleImg": "https://svet-vitebsk.by/wp-content/uploads/2022/01/krug-belyj-reshetka.jpg",
         "titleCard": "СВЕТИЛЬНИК НБП 03-60(100)-002 УХЛ1",
         "informationProduct": "Степень защиты: IP54, Мощность: 60 Вт (100Вт), Источник света: Патрон Е27, Предназначены для для освещения жилых, подсобных, производственных и др. помещений с повышенной влажностью и температурой (бани, сауны, бассейны и т.д.)",
-        "count": 3
+        "count": 2
       },
       {
-        "id": "1",
+        "id": "4",
         "price": 250,
-        "titleImg": "https://75.img.avito.st/image/1/1.VpyAvLax-nW2C3h4oLEIz2kf-nE8HfB3.kt2OAD6vju7t1M6eamqK5mh-9lGufsGyrtWkWDagKJ4",
-        "titleCard": "Светильник для бани и сауны IP65",
-        "informationProduct": "Степень защиты IP65, Мощность: 60 Вт, Источник света Патрон Е27, Предназначены для для освещения жилых, подсобных, производственных и др. помещений с повышенной влажностью и температурой (бани, сауны, бассейны и т.д.)",
-        "count": 1
-      },
-      {
-        "id": "11",
-        "price": 250,
-        "titleImg": "https://svet-vitebsk.by/wp-content/uploads/2022/03/img_3093-kopija.png",
-        "titleCard": "СВЕТИЛЬНИК SPO-SVET-36-1200-6500",
-        "informationProduct": "Степень защиты: IP40. Мощность: 36 Вт. Цветовая температура: 6500К. Светильники предназначены для общего освещения административных и общественных помещений.",
+        "titleImg": "https://svet-vitebsk.by/wp-content/uploads/2022/01/nbp_04_60_001_white.jpg",
+        "titleCard": "СВЕТИЛЬНИК НБП 04-60(100)-001 УХЛ1",
+        "informationProduct": "Степень защиты: IP54, Мощность: 60 Вт (100Вт), Источник света: Патрон Е27, Предназначены для для освещения жилых, подсобных, производственных и др. помещений с повышенной влажностью и температурой (бани, сауны, бассейны и т.д.)",
         "count": 1
       }
     ]

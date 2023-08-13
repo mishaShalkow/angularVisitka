@@ -23,8 +23,7 @@
     </div>
 </div> -->
 
-<div class="card cardByuMedia text-center modalView">
-
+<!-- <div class="card cardByuMedia text-center modalView">
   <div class="card-header" >
     <ul class="nav nav-pills card-header-pills">
     </ul>
@@ -35,16 +34,14 @@
         <table class="table table-hover table-bordered" >
           <thead>
             <tr>
-              <!-- <th>Артикул</th> -->
               <th>Название</th>
               <th>Цена</th>
               <th>Количество</th>
               <th>Сумма</th>
             </tr>
           </thead>
-          <thead id="cart" *ngFor="let item of newOfferProductsFromBaket">
+          <thead id="cart" *ngFor="let item of newOfferProducts">
             <tr>
-              <!-- <th>{{art + 1}}</th> -->
               <th>{{ item.titleCard }}</th>
               <th>{{ item.price }}</th>
               <th>{{item.count}}</th>
@@ -59,6 +56,7 @@
               <th>Полное имя</th>
               <th>Адрес доставки</th>
               <th>Номер покупателя</th>
+              <th>Статус заказа</th>
             </tr>
           </thead>
           <thead id="cart" *ngFor="let itemOffer of newOfferProducts">
@@ -66,6 +64,7 @@
               <th>{{itemOffer.fullName}}</th>
               <th>{{itemOffer.awayDelivery}}</th>
               <th>{{itemOffer.numberCustomer}}</th>
+              <th>Не исполнен</th>
             </tr>
           </thead>
         </table>
@@ -74,25 +73,83 @@
           <span id="total-cart-summa">{{total }}</span>
           руб.
         </div>
-    <!--   <br>
-        <h4>Детали заказа</h4>
-      <br>
-        <table class="table table-hover table-bordered">
-          <thead>
+      </div>
+    </div>
+  </div> -->
+
+
+
+<div class="card cardByuMedia text-center modalView">
+  <div class="card-header" >
+    <ul class="nav nav-pills card-header-pills">
+    </ul>
+    <div class="container">
+      <h2>Заказ покупателя</h2>
+      <br />
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered" >
+          <thead id="cart" *ngFor="let item of newOfferProducts">
+            <tr>
+              <th>Название</th>
+              <th>Цена</th>
+              <th>Количество</th>
+              <th>Сумма</th>
+            </tr>
+            <br>
+            <tr>
+              <th>{{ item.titleCard }}</th>
+              <th>{{ item.price }}</th>
+              <th>{{item.count}}</th>
+              <th>{{ item.count * item?.price | number }} руб.</th>
+            </tr>
+          </thead>
+        <!--     <br>
+              <h4>Детали заказа</h4>
+            <br>
+            <thead *ngFor="let item of newOfferProducts">
             <tr>
               <th>Полное имя</th>
               <th>Адрес доставки</th>
               <th>Номер покупателя</th>
+              <th>Статус заказа</th>
             </tr>
-          </thead>
-          <thead id="cart" *ngFor="let itemOffer of newOfferProducts">
+            <br>
             <tr>
-              <th>{{itemOffer.fullName}}</th>
-              <th>{{itemOffer.awayDelivery}}</th>
-              <th>{{itemOffer.numberCustomer}}</th>
+              <th>{{item.fullName}}</th>
+              <th>{{item.awayDelivery}}</th>
+              <th>{{item.numberCustomer}}</th>
+              <th>Не исполнен</th>
             </tr>
-          </thead>
-        </table> -->
+            <br>
+          </thead> -->
+     <!--      <thead id="cart" *ngFor="let item of newOfferProducts">
+            <tr>
+              <th>{{ item.titleCard }}</th>
+              <th>{{ item.price }}</th>
+              <th>{{item.count}}</th>
+              <th>{{ item.count * item?.price | number }} руб.</th>
+            </tr>
+            <br>
+            <tr>
+              <th>{{item.fullName}}</th>
+              <th>{{item.awayDelivery}}</th>
+              <th>{{item.numberCustomer}}</th>
+              <th>Не исполнен</th>
+            </tr>
+          </thead> -->
+         
+        </table>
+        <div>
+          Итого:
+          <span id="total-cart-summa">{{total }}</span>
+          руб.
+        </div>
       </div>
     </div>
   </div>
+
+
+
+  
+
+  

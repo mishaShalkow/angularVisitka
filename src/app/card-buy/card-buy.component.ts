@@ -5,7 +5,7 @@ import {Subscription} from 'rxjs'
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog'
 import {DialogBoxComponent} from '../dialog-box/dialog-box.component'
 import {ActivatedRoute} from '@angular/router'
-import {HttpBackend, HttpClient} from '@angular/common/http'
+import {HttpBackend, HttpClient, HttpHeaders} from '@angular/common/http'
 
 @Component({
   selector: 'app-card-buy',
@@ -37,9 +37,13 @@ export class CardBuyComponent implements OnInit {
         this.basket = data
         console.log(data)
         sessionStorage.setItem('cart', JSON.stringify(this.basket))
-
-        /*    sessionStorage.setItem('valueStorage, JSON.stringify(this.basket)) */
       })
+  }
+
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+    }),
   }
 
   minusItemFromBasket(item: IProduct) {
@@ -67,23 +71,17 @@ export class CardBuyComponent implements OnInit {
   }
 
   clearCard() {
-    this._cartService.deleteAllProductsFromBasket().subscribe(
-      (response) => {
+    this._cartService
+      .deleteAllProductsFromBasket()
+      .subscribe((data) => console.log(data))
+    /* this._cartService.clearCard() */
+
+    /*     (response) => {
         console.log(response)
       },
       (error) => {
         console.log(error)
-      }
-    )
-
-    /* this.http.delete('http://localhost:4200/basket').subscribe(
-      (response) => {
-        console.log(response)
-      },
-      (error) => {
-        console.error(error)
-      }
-    ) */
+      } */
   }
 
   get total() {
@@ -98,7 +96,7 @@ export class CardBuyComponent implements OnInit {
 
   openDialogOfer() {
     this._cartService.getProductFromBasket().subscribe((data) => {
-      if (data) this.postOfferFromBasket(data)
+      if (data) this.postOffer(data)
       console.log(data)
     })
     let dialogConf = new MatDialogConfig()
@@ -106,7 +104,7 @@ export class CardBuyComponent implements OnInit {
     dialogConf.disableClose = true
     const dialogOp = this.dialog.open(DialogBoxComponent, dialogConf)
     dialogOp.afterClosed().subscribe((data) => {
-      if (data) this.postOffer(data)
+      if (data) this.postOfferFromBasket(data)
     })
   }
 
@@ -118,7 +116,7 @@ export class CardBuyComponent implements OnInit {
       this.newOfferProductsFromBaketSub.unsubscribe()
   }
 
-  postOffer(data: IProduct) {
+  postOffer(data: any) {
     this._cartService
       .postOfferProducts(data)
       .subscribe((product) => this.newOfferProducts.push(product))
