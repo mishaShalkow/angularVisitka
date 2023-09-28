@@ -15,22 +15,27 @@ export class PersonalBoxComponent implements OnInit {
   basketSubscribe: Subscription
   newOfferProductsFromBaket: IProduct[]
   newOfferProductsFromBaketSub: Subscription
+  sum = 0
 
   constructor(private _cartService: CartServiceService) {}
 
   ngOnInit(): void {
     this._cartService.getProductFromPersonalBox().subscribe((data) => {
       this.newOfferProducts = data
+      for (let i of this.newOfferProducts) {
+        this.sum += i.price * i.count
+      }
       console.log(data)
+      return this.sum
     })
 
-    /*   this.newOfferProductsFromBaketSub = this._cartService
+    this.newOfferProductsFromBaketSub = this._cartService
       .getProductFromPersonalBoxFromBasket()
       .subscribe((data) => {
-        this.newOfferProducts = data
+        this.newOfferProductsFromBaket = data
         console.log(data)
       })
- */
+
     /* this.basketSubscribe = this._cartService
       .getProductFromBasket()
       .subscribe((data) => {

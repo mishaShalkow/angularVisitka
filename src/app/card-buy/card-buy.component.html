@@ -5,9 +5,9 @@
         <li class="nav-item">
           <a class="nav-link informTitle active" [routerLink]="['baseComponent']">Вернуться к выбору товара</a>
         </li>
-        <button (click)="clearCard()" class="nav-link completeFormByu">
+      <!--   <button (click)="clearArray()" class="nav-link completeFormByu">
           Очистить корзину
-        </button>
+        </button> -->
       </ul>
       <div class="container">
         <h2>Группа компаний свет</h2>
@@ -31,15 +31,6 @@
                 <th>{{ item.price }}</th>
                 <th>
                   <button class="button" mat-flat-button (click)="minusItemFromBasket(item)">-</button>
-      <!--             <input
-                    [(ngModel)]="item.count"
-                    [ngModelOptions]="{standalone: true}"
-                    min="1"
-                    type="number"
-                    value="1"
-                    name=""
-                    class="form-control text-center w-30"
-                  /> -->
                   {{item.count}}
                   <button  class="button" mat-flat-button (click)="plusItemFromBasket(item)">+</button>
                 </th>

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core'
 import {CartServiceService} from '../Service/cart-service.service'
 import {IProduct, OfferProduct} from '../models/cardProduct'
-import {Subscription} from 'rxjs'
+import {Subscription, empty, map} from 'rxjs'
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog'
 import {DialogBoxComponent} from '../dialog-box/dialog-box.component'
 import {ActivatedRoute} from '@angular/router'
@@ -13,7 +13,6 @@ import {HttpBackend, HttpClient, HttpHeaders} from '@angular/common/http'
   styleUrls: ['./card-buy.component.scss'],
 })
 export class CardBuyComponent implements OnInit {
-  urlBasket = 'http://localhost:3000/basket'
   basket: IProduct[]
   basketSubscribe: Subscription
   newOfferProducts: IProduct[]
@@ -23,33 +22,22 @@ export class CardBuyComponent implements OnInit {
 
   constructor(
     private _cartService: CartServiceService,
-    public dialog: MatDialog,
-    private route: ActivatedRoute,
-    private http: HttpClient
+    public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
-    this.basket = this._cartService.getItem()
-
     this.basketSubscribe = this._cartService
       .getProductFromBasket()
       .subscribe((data) => {
         this.basket = data
         console.log(data)
-        sessionStorage.setItem('cart', JSON.stringify(this.basket))
       })
-  }
-
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-    }),
   }
 
   minusItemFromBasket(item: IProduct) {
     if (item.count === 1) {
       this._cartService.deleteItemFromBasket(item.id).subscribe((date) => {
-        let idx = this.basket.findIndex((data) => data.id === item.id)
+        let idx = this.basket.findIndex((data: any) => data.id === item.id)
         this.basket.splice(idx, 1)
       })
     } else {
@@ -65,28 +53,14 @@ export class CardBuyComponent implements OnInit {
 
   removeFromCard(item: IProduct) {
     this._cartService.deleteItemFromBasket(item.id).subscribe(() => {
-      let idx = this.basket.findIndex((data) => data.id === item.id)
+      let idx = this.basket.findIndex((data: any) => data.id === item.id)
       this.basket.splice(idx, 1)
     })
   }
 
-  clearCard() {
-    this._cartService
-      .deleteAllProductsFromBasket()
-      .subscribe((data) => console.log(data))
-    /* this._cartService.clearCard() */
-
-    /*     (response) => {
-        console.log(response)
-      },
-      (error) => {
-        console.log(error)
-      } */
-  }
-
   get total() {
     return this.basket?.reduce(
-      (sum, product) => ({
+      (sum: any, product: any) => ({
         count: 1,
         price: sum.price + product.count * product.price,
       }),

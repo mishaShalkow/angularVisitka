@@ -26,6 +26,7 @@
     "@material/card": "^14.0.0",
     "@types/body-parser": "^1.19.2",
     "angular8-yandex-maps": "^13.2.0",
+    "cors": "^2.8.5",
     "rxjs": "~7.5.0",
     "tslib": "^2.6.0",
     "zone.js": "~0.11.4"

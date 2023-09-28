@@ -7,7 +7,7 @@ import {filter} from 'rxjs'
 })
 export class FilterShopsPipe implements PipeTransform {
   transform(product: IProduct[], search: string): IProduct[] {
-    return product.filter((p) =>
+    return product.filter((p) => 
       p.titleCard.toLowerCase().includes(search.toLowerCase())
     )
   }
