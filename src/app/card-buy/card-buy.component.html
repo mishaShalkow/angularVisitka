@@ -35,10 +35,12 @@
                   <button  class="button" mat-flat-button (click)="plusItemFromBasket(item)">+</button>
                 </th>
                 <th>{{ item.count * item?.price | number }} руб.</th>
+                <th>
                 <button
                   (click)="removeFromCard(item)"
                   type="button"
                   class="btn mt-3">x</button>
+                </th>
               </tr>
             </thead>
           </table>

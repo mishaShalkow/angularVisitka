@@ -21,3 +21,13 @@ export interface OfferProduct {
   awayDelivery: string
   numberCustomer: number
 }
+
+export interface basket {
+  art: number
+  titleCard: string
+  price: number
+  count: number
+  totalPrice: number
+}
+
+

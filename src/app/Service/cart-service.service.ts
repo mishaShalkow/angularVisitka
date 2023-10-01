@@ -47,11 +47,11 @@ export class CartServiceService {
     return this.http.delete<any>(`${this.urlBasket}/${id}`)
   }
 
-  postOfferProducts(product: IProduct[]) {
+  postOfferProducts(product: IProduct) {
     return this.http.post<any>(this.basketOffer, product)
   }
 
-  postOfferProductsFromBaskeet(product: IProduct[]) {
+  postOfferProductsFromBasket(product: IProduct) {
     return this.http.post<any>(this.urlOffer, product)
   }
 

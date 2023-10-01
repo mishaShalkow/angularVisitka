@@ -17,7 +17,7 @@ export class CardBuyComponent implements OnInit {
   basketSubscribe: Subscription
   newOfferProducts: IProduct[]
   newOfferProductsSubscribe: Subscription
-  newOfferProductsFromBaket: IProduct[]
+  newOfferProductsFromBaket: any
   newOfferProductsFromBaketSub: Subscription
 
   constructor(
@@ -98,7 +98,7 @@ export class CardBuyComponent implements OnInit {
 
   postOfferFromBasket(data: any) {
     this._cartService
-      .postOfferProductsFromBaskeet(data)
+      .postOfferProductsFromBasket(data)
       .subscribe((product) => this.newOfferProductsFromBaket.push(product))
   }
 }
