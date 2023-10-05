@@ -10,6 +10,17 @@ export interface IProduct {
   fullName: string
   awayDelivery: string
   numberCustomer: number
+  protection: string
+  power: string
+  light: number
+  color: string
+  Execution: string
+  voltage: number
+  material: string
+  temperature: number
+  Dmaterial: string
+  size: number
+  package: string
 }
 
 export interface OfferProduct {
@@ -29,5 +40,3 @@ export interface basket {
   count: number
   totalPrice: number
 }
-
-

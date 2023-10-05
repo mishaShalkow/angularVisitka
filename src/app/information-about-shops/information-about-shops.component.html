@@ -1,15 +1,60 @@
-<div class="card mb-3" style="max-width: 540px;">
+<div class="card mb-3">
     <div class="row g-0">
       <div class="col-md-4">
-        <img [src]="product.titleImg" class="img-fluid rounded-start" alt="...">
+        <img [src]="product.titleImg" class="img-fluid" alt="...">
       </div>
       <div class="col-md-8">
         <div class="card-body">
           <h5 class="card-title">{{product.titleCard}}</h5>
           <p class="card-text">{{product.informationProduct}}</p>
-          <p class="card-text"><small class="text-muted">Последнее обновление 25.05.2022</small></p>
+
+          <table class="table table-hover ">
+            <tr class="tableConfig">
+              <td>Степень защиты</td>
+              <td>{{product.protection}}</td>
+            </tr>
+            <tr class="tableConfig">
+              <td>Мощность</td>
+              <td>{{product.power}}</td>
+            </tr>
+            <tr class="tableConfig">
+              <td>Источник света</td>
+              <td>{{product.light}}</td>
+            </tr>
+            <tr class="tableConfig">
+              <td>Цвет</td>
+              <td>{{product.color}}</td>
+            </tr>
+            <tr class="tableConfig">
+              <td>Номинальное напряжение</td>
+              <td>{{product.voltage}} </td>
+            </tr>
+            <tr class="tableConfig">
+              <td>Исполнение</td>
+              <td>{{product.Execution}}</td>
+            </tr>
+            <tr class="tableConfig">
+              <td>Материал корпуса</td>
+              <td>{{product.material}}</td>
+            </tr>
+            <tr class="tableConfig">
+              <td>Температура эксплуатации</td>
+              <td>{{product.temperature}}</td>
+            </tr>
+            <tr class="tableConfig">
+              <td>Материал рассеивателя</td>
+              <td>{{product.Dmaterial}}</td>
+            </tr>
+            <tr class="tableConfig">
+              <td>Габаритный размер</td>
+              <td>{{product.size}}</td>
+            </tr>
+            <tr class="tableConfig">
+              <td>Упаковка</td>
+              <td>{{product.package}}</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
   </div>
-  
