@@ -1,11 +1,9 @@
 import {Component, OnInit} from '@angular/core'
 import {CartServiceService} from '../Service/cart-service.service'
-import {IProduct, OfferProduct} from '../models/cardProduct'
-import {Subscription, empty, map} from 'rxjs'
+import {IProduct} from '../models/cardProduct'
+import {Subscription} from 'rxjs'
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog'
 import {DialogBoxComponent} from '../dialog-box/dialog-box.component'
-import {ActivatedRoute} from '@angular/router'
-import {HttpBackend, HttpClient, HttpHeaders} from '@angular/common/http'
 
 @Component({
   selector: 'app-card-buy',

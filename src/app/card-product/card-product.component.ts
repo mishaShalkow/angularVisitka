@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, EventEmitter, Output} from '@angular/core'
+import {Component, OnInit, EventEmitter, Output} from '@angular/core'
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog'
 import {ActivatedRoute} from '@angular/router'
 import {Subscription} from 'rxjs'
@@ -61,16 +61,6 @@ export class CardProductComponent implements OnInit {
     if (this.productsSubscribe) this.productsSubscribe.unsubscribe
     if (this.basketSubscribe) this.basketSubscribe.unsubscribe
   }
-  /* 
-  addToCart(product: IProduct) {
-    if (!this._cartService.productCart(product)) {
-      product.count = 1
-      this._cartService.addToCart(product)
-      this.subTotal = product.price
-      console.log(product)
-    }
-    this.openDialog()
-  } */
 
   addToBasket(product: IProduct) {
     product.count = 1

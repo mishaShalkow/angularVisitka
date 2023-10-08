@@ -1,7 +1,6 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core'
-import {CartServiceService} from '../Service/cart-service.service'
+import {Component, OnInit} from '@angular/core'
 import {IProduct} from '../models/cardProduct'
-import {ActivatedRoute, Route} from '@angular/router'
+import {ActivatedRoute} from '@angular/router'
 import {Subscription} from 'rxjs'
 
 @Component({

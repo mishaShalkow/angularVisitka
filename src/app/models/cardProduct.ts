@@ -14,11 +14,11 @@ export interface IProduct {
   power: string
   light: number
   color: string
-  Execution: string
+  execution: string
   voltage: number
   material: string
   temperature: number
-  Dmaterial: string
+  glassMaterial: string
   size: number
   package: string
 }

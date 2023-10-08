@@ -1,7 +1,6 @@
-import {Component, Inject, Input, OnInit, TemplateRef} from '@angular/core'
+import {Component, Inject, OnInit} from '@angular/core'
 import {FormControl, FormGroup} from '@angular/forms'
 import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog'
-import {RouterLink, RouterLinkActive} from '@angular/router'
 import {PersonalBoxComponent} from '../personal-box/personal-box.component'
 
 @Component({
@@ -26,14 +25,6 @@ export class ChekingBoxComponent implements OnInit {
     this.data = {
       password: this.myForm.value.password,
     }
-
-    /*     if (this.data.password == this.password) {
-      try {
-        this.dialogRef.close()
-      } catch {
-        alert('ee')
-      }
-    } */
 
     if (this.data.password != this.password) {
       alert('ВВеден неверный пароль')

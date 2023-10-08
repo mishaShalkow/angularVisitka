@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core'
 import {Subscription} from 'rxjs'
-import {IProduct, OfferProduct} from '../models/cardProduct'
+import {IProduct} from '../models/cardProduct'
 import {CartServiceService} from '../Service/cart-service.service'
 
 @Component({
